@@ -1,0 +1,50 @@
+/*
+  GrowDigitalNY master .gdny stylesheet
+  WHERE: WordPress > Appearance > Customize > Additional CSS (or Elementor > Site Settings > Custom CSS).
+  Every page in pages/ and content/services/ also carries these rules inline, so pages work even
+  without this file. Once this is installed site-wide, the inline <style> block in a page is optional.
+  All selectors are scoped to .gdny, so they won't affect the theme. Keep the @media block last.
+*/
+.gdny{--ink:#14213d;--muted:#5b6475;--brand:#0f9d58;--brand-dark:#0b7a44;--bg:#f6f8fb;--line:#e3e7ee;--warn:#fff7e6;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);line-height:1.65;font-size:17px;max-width:880px;margin:0 auto;padding:0 18px}
+.gdny *{box-sizing:border-box}
+.gdny h1{font-size:2.3rem;line-height:1.2;margin:.4em 0 .3em}
+.gdny h2{font-size:1.6rem;margin:2em 0 .6em;line-height:1.3}
+.gdny h3{font-size:1.15rem;margin:1.4em 0 .4em}
+.gdny p{margin:0 0 1em}
+.gdny a{color:var(--brand-dark)}
+.gdny .disclosure{background:var(--warn);border:1px solid #f3dfb2;border-radius:8px;padding:10px 14px;font-size:.88rem;color:#6b5418;margin:18px 0}
+.gdny .meta{color:var(--muted);font-size:.9rem}
+.gdny .lead{font-size:1.15rem;color:#2b3445}
+.gdny .btn{display:inline-block;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:10px;font-size:1.05rem;box-shadow:0 4px 14px rgba(15,157,88,.25);transition:background .15s}
+.gdny .btn:hover{background:var(--brand-dark)}
+.gdny .btn-sub{display:block;font-size:.85rem;color:var(--muted);margin-top:8px}
+.gdny .verdict{border:2px solid var(--brand);border-radius:14px;padding:22px 24px;background:#fff;margin:26px 0}
+.gdny .verdict h2{margin-top:0;font-size:1.3rem}
+.gdny .verdict ul{margin:.4em 0 0;padding-left:1.2em}
+.gdny .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gdny .card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px}
+.gdny .card h3{margin-top:0}
+.gdny .card p:last-child{margin-bottom:0}
+.gdny .pros li::marker{content:"✓  ";color:var(--brand)}
+.gdny .cons li::marker{content:"✕  ";color:#c0392b}
+.gdny table{width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:.95rem;background:#fff}
+.gdny th,.gdny td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+.gdny th{background:var(--bg)}
+.gdny .shot{border:2px dashed #b8c1d1;border-radius:12px;padding:40px 16px;text-align:center;color:var(--muted);background:var(--bg);margin:16px 0}
+.gdny details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0;background:#fff}
+.gdny summary{font-weight:700;cursor:pointer}
+.gdny .final{background:var(--ink);color:#fff;border-radius:16px;padding:34px 26px;text-align:center;margin:40px 0}
+.gdny .final h2{color:#fff;margin-top:0}
+.gdny .final p{color:#cfd6e4}
+.gdny .final .btn-sub{color:#aab4c8}
+.gdny .toc{background:var(--bg);border-radius:10px;padding:14px 18px;font-size:.95rem}
+.gdny .toc ol{margin:.3em 0 0;padding-left:1.2em}
+.gdny mark.verify{background:#fff3c4;color:#6b5418;padding:0 4px;border-radius:4px;font-size:.9em}
+.gdny .steps{counter-reset:s;list-style:none;padding:0;margin:12px 0}
+.gdny .steps li{counter-increment:s;position:relative;padding:0 0 14px 48px;margin:0}
+.gdny .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.gdny .proof{border:2px dashed #e0c98a;border-radius:12px;padding:20px;background:var(--warn);color:#6b5418;margin:18px 0}
+.gdny .form-slot{border:2px dashed #aab4c8;border-radius:12px;padding:26px 16px;margin:18px 0 6px;color:#cfd6e4}
+.gdny .pick{font-size:.8rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.04em}
+.gdny .tool{border-top:1px solid var(--line);padding-top:6px}
+@media(max-width:680px){.gdny{font-size:16px}.gdny h1{font-size:1.8rem}.gdny .grid{grid-template-columns:1fr}.gdny .btn{display:block;text-align:center}.gdny table{display:block;overflow-x:auto}}

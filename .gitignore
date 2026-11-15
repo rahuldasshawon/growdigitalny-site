@@ -1,0 +1,12 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# WordPress backups may contain unpublished content
+backups/
+
+# OS / editor
+.DS_Store
+__pycache__/
+*.pyc

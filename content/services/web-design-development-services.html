@@ -1,0 +1,197 @@
+<!--
+  Web Design & Development (service page): page for growdigitalny.com
+  Slug: web-design-development-services   Status: create as DRAFT
+  HOW TO USE: In WordPress, create a new page, add an Elementor "HTML" widget (or a Gutenberg
+  "Custom HTML" block) and paste everything from the opening .gdny div to the end of the file.
+  DO NOT paste this comment: it would appear in your public page source.
+  ONE H1: set the WordPress page title to the H1 text and hide the theme title
+  (Elementor: Hide Title; most themes have a per-page option), or delete the in-page H1. Styles are scoped to .gdny.
+  BEFORE PUBLISHING:
+   1. Search for [VERIFY] and fill in every item: pricing and currency, timelines, response time, contract terms, tools and time zones. Delete the highlights.
+   2. Fill in the email in the ProfessionalService JSON-LD at the bottom (areaServed is set to Worldwide).
+   3. Proof box: add one REAL client result or testimonial with permission, or delete the box. Never invent one.
+   4. Replace the [FORM] placeholder with your form plugin's shortcode.
+   5. CTA buttons: 3 (top, after pricing, final), all going to /contact/. No affiliate links on this page (by design).
+   6. Cross-links to the other two service pages. Publish all three together.
+   7. GLOBAL AUDIENCE: if you'll take EU/UK leads, make sure the privacy policy and a cookie-consent banner are live first.
+   Meta title (≤60):       Web Design & Development for Startups & SaaS | GrowDigitalNY
+   Meta description (≤155): Fast, scalable websites for startups, SaaS companies and online businesses worldwide. Remote-first web design and development. Book a free review.
+-->
+<div class="gdny">
+<style>
+.gdny{--ink:#14213d;--muted:#5b6475;--brand:#0f9d58;--brand-dark:#0b7a44;--bg:#f6f8fb;--line:#e3e7ee;--warn:#fff7e6;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);line-height:1.65;font-size:17px;max-width:880px;margin:0 auto;padding:0 18px}
+.gdny *{box-sizing:border-box}
+.gdny h1{font-size:2.3rem;line-height:1.2;margin:.4em 0 .3em}
+.gdny h2{font-size:1.6rem;margin:2em 0 .6em;line-height:1.3}
+.gdny h3{font-size:1.15rem;margin:1.4em 0 .4em}
+.gdny p{margin:0 0 1em}
+.gdny a{color:var(--brand-dark)}
+.gdny .disclosure{background:var(--warn);border:1px solid #f3dfb2;border-radius:8px;padding:10px 14px;font-size:.88rem;color:#6b5418;margin:18px 0}
+.gdny .meta{color:var(--muted);font-size:.9rem}
+.gdny .lead{font-size:1.15rem;color:#2b3445}
+.gdny .btn{display:inline-block;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:10px;font-size:1.05rem;box-shadow:0 4px 14px rgba(15,157,88,.25);transition:background .15s}
+.gdny .btn:hover{background:var(--brand-dark)}
+.gdny .btn-sub{display:block;font-size:.85rem;color:var(--muted);margin-top:8px}
+.gdny .verdict{border:2px solid var(--brand);border-radius:14px;padding:22px 24px;background:#fff;margin:26px 0}
+.gdny .verdict h2{margin-top:0;font-size:1.3rem}
+.gdny .verdict ul{margin:.4em 0 0;padding-left:1.2em}
+.gdny .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gdny .card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px}
+.gdny .card h3{margin-top:0}
+.gdny .card p:last-child{margin-bottom:0}
+.gdny .pros li::marker{content:"✓  ";color:var(--brand)}
+.gdny .cons li::marker{content:"✕  ";color:#c0392b}
+.gdny table{width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:.95rem;background:#fff}
+.gdny th,.gdny td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+.gdny th{background:var(--bg)}
+.gdny .shot{border:2px dashed #b8c1d1;border-radius:12px;padding:40px 16px;text-align:center;color:var(--muted);background:var(--bg);margin:16px 0}
+.gdny details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0;background:#fff}
+.gdny summary{font-weight:700;cursor:pointer}
+.gdny .final{background:var(--ink);color:#fff;border-radius:16px;padding:34px 26px;text-align:center;margin:40px 0}
+.gdny .final h2{color:#fff;margin-top:0}
+.gdny .final p{color:#cfd6e4}
+.gdny .final .btn-sub{color:#aab4c8}
+.gdny .toc{background:var(--bg);border-radius:10px;padding:14px 18px;font-size:.95rem}
+.gdny .toc ol{margin:.3em 0 0;padding-left:1.2em}
+.gdny mark.verify{background:#fff3c4;color:#6b5418;padding:0 4px;border-radius:4px;font-size:.9em}
+.gdny .steps{counter-reset:s;list-style:none;padding:0;margin:12px 0}
+.gdny .steps li{counter-increment:s;position:relative;padding:0 0 14px 48px;margin:0}
+.gdny .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.gdny .proof{border:2px dashed #e0c98a;border-radius:12px;padding:20px;background:var(--warn);color:#6b5418;margin:18px 0}
+.gdny .form-slot{border:2px dashed #aab4c8;border-radius:12px;padding:26px 16px;margin:18px 0 6px;color:#cfd6e4}
+.gdny .pick{font-size:.8rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.04em}
+.gdny .tool{border-top:1px solid var(--line);padding-top:6px}
+@media(max-width:680px){.gdny{font-size:16px}.gdny h1{font-size:1.8rem}.gdny .grid{grid-template-columns:1fr}.gdny .btn{display:block;text-align:center}.gdny table{display:block;overflow-x:auto}}
+</style>
+
+<h1>Web Design and Development for Startups, SaaS and Online Businesses</h1>
+<p class="meta">GrowDigitalNY · Remote-first digital marketing and web development · Working with clients worldwide</p>
+
+<p class="lead">Fast, scalable websites built to convert visitors from any country into sign-ups, demos and customers. We work remotely with founders and marketing teams worldwide, from first launch to a full rebuild.</p>
+
+<p><a class="btn" href="/contact/">Book a Free Website Review →</a><span class="btn-sub">No obligation · We'll reply within <mark class="verify">[VERIFY: response time, e.g. one business day]</mark></span></p>
+
+<div class="toc"><strong>On this page</strong>
+<ol><li><a href="#sv-who">Who it's for</a></li><li><a href="#sv-included">What's included</a></li><li><a href="#sv-process">How it works</a></li><li><a href="#sv-pricing">Pricing</a></li><li><a href="#sv-remote">How we work remotely</a></li><li><a href="#sv-faq">FAQ</a></li></ol></div>
+
+<h2 id="sv-who">Who our web design and development service is for</h2>
+<p>We work with growing online businesses wherever they're based, including:</p>
+<ul>
+  <li>Early-stage startups launching or relaunching their marketing site</li>
+  <li>SaaS companies that need landing pages, pricing pages and docs that convert</li>
+  <li>Ecommerce and online businesses selling across borders</li>
+  <li>Agencies and consultancies that need a reliable white-label build partner</li>
+  <li>Teams moving off a slow or hard-to-edit website</li>
+</ul>
+
+<h2 id="sv-included">What's included</h2>
+<div class="grid">
+  <div class="card"><h3>Conversion-focused design</h3><p>Clear messaging, pricing and calls to action designed around your sign-up or demo funnel.</p></div>
+  <div class="card"><h3>Global web architecture</h3><p>A clean site structure, CDN-ready hosting and a setup that scales as you add pages, products and markets.</p></div>
+  <div class="card"><h3>Speed and Core Web Vitals</h3><p>Lightweight pages and optimized assets so the site loads quickly for visitors everywhere, on any connection.</p></div>
+  <div class="card"><h3>Multilingual and multi-region</h3><p>Language and regional versions with correct hreflang tags when you're ready to expand. Pair it with our <a href="/seo-services/">SEO</a> service.</p></div>
+  <div class="card"><h3>Accessible and secure</h3><p>Built with accessibility best practices, HTTPS, regular backups and security hardening.</p></div>
+  <div class="card"><h3>Easy for your team to edit</h3><p>WordPress or another CMS your team can update without a developer <mark class="verify">[VERIFY: which platforms you build on]</mark>.</p></div>
+</div>
+
+<h2 id="sv-process">How it works</h2>
+<ol class="steps">
+  <li><strong>Discovery call.</strong> A video call to understand your product, audience, goals and timeline.</li>
+  <li><strong>Architecture and content plan.</strong> We map the site structure, key pages and the content each one needs.</li>
+  <li><strong>Design.</strong> You review designs for the key pages before we build the rest.</li>
+  <li><strong>Build and test.</strong> We build, then test across browsers, devices and page speed tools.</li>
+  <li><strong>Launch and handover.</strong> We launch, set up analytics and show your team how to manage the site.</li>
+</ol>
+
+<h2 id="sv-pricing">Pricing</h2>
+<p>Projects are quoted based on scope: number of pages, integrations and languages. <mark class="verify">[VERIFY: typical starting price or range, and currency, e.g. USD]</mark></p>
+<p>You'll get a clear written proposal before any work starts <mark class="verify">[VERIFY: confirm your contract terms, e.g. minimum term and notice period]</mark>.</p>
+<p style="margin-top:22px"><a class="btn" href="/contact/">Book a Free Website Review →</a></p>
+
+<h2 id="sv-remote">How we work with clients worldwide</h2>
+<p>We're a remote-first agency, so where you're based doesn't matter. Work runs through shared project boards and written updates you can read on your own schedule, with video calls for kick-offs, reviews and monthly check-ins <mark class="verify">[VERIFY: tools you use, e.g. Slack, Loom, Google Meet, and the time zones you cover]</mark>.</p>
+<div class="proof">[VERIFY: add one real client result or testimonial, with permission, e.g. a named company, its country and a specific, true outcome. If you don't have one yet, delete this box. Never invent one.]</div>
+<p>We also offer <a href="/seo-services/">SEO</a> and <a href="/lead-generation-services/">lead generation</a>, so your website, search visibility and campaigns work together.</p>
+
+<h2 id="sv-faq">Frequently asked questions</h2>
+<details><summary>Do you work with clients outside the United States?</summary><p>Yes. We're a remote-first agency and work with startups and online businesses worldwide.</p></details>
+<details><summary>How do you handle different time zones?</summary><p>Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times that suit you. <mark class="verify">[VERIFY: your working hours and time zone overlap]</mark></p></details>
+<details><summary>How long does a website project take?</summary><p>A focused marketing site usually takes <mark class="verify">[VERIFY: typical timeline]</mark>. Larger builds with integrations or multiple languages take longer, and we'll give you a timeline before we start.</p></details>
+<details><summary>Which currencies do you invoice in?</summary><p><mark class="verify">[VERIFY: e.g. USD by default; other currencies on request]</mark></p></details>
+<details><summary>Can you rebuild our site without losing search traffic?</summary><p>Yes. We map old URLs to new ones, keep redirects in place and check rankings and traffic after launch.</p></details>
+
+<div class="final">
+  <h2>Ready to grow your business online?</h2>
+  <p>Tell us about your product and goals, and we'll suggest the next step, with no pressure and no jargon.</p>
+  <div class="form-slot">[FORM: embed your contact form here (WPForms, Elementor Form or GetResponse form shortcode). Include a link to <a href="/privacy-policy/" style="color:#cfd6e4">our privacy policy</a> under the form.]</div>
+  <p style="margin-top:16px"><a class="btn" href="/contact/">Book a Free Website Review →</a></p>
+  <span class="btn-sub">Or email <mark class="verify">[CONTACT EMAIL]</mark></span>
+</div>
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "ProfessionalService",
+"name": "GrowDigitalNY",
+"url": "https://growdigitalny.com/",
+"description": "Fast, scalable websites built to convert visitors from any country into sign-ups, demos and customers. We work remotely with founders and marketing teams worldwide, from first launch to a full rebuild.",
+"email": "[VERIFY: contact email]",
+"areaServed": "Worldwide",
+"makesOffer": {
+"@type": "Offer",
+"itemOffered": {
+"@type": "Service",
+"name": "Web Design & Development"
+}
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Do you work with clients outside the United States?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We're a remote-first agency and work with startups and online businesses worldwide."
+}
+},
+{
+"@type": "Question",
+"name": "How do you handle different time zones?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times that suit you. [VERIFY: your working hours and time zone overlap]"
+}
+},
+{
+"@type": "Question",
+"name": "How long does a website project take?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A focused marketing site usually takes [VERIFY: typical timeline]. Larger builds with integrations or multiple languages take longer, and we'll give you a timeline before we start."
+}
+},
+{
+"@type": "Question",
+"name": "Which currencies do you invoice in?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "[VERIFY: e.g. USD by default; other currencies on request]"
+}
+},
+{
+"@type": "Question",
+"name": "Can you rebuild our site without losing search traffic?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We map old URLs to new ones, keep redirects in place and check rankings and traffic after launch."
+}
+}
+]
+}
+</script>
+</div>
