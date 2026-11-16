@@ -384,8 +384,11 @@ search:
     Hostinger-hosted agent MCP below, which authenticates through Hostinger instead of the site.
   - **Resolved on the site side (2026-11-16):** Rahul created a real Application Password named
     "Claude Code" (the earlier saved login was his normal password) and added the HTTP_AUTHORIZATION
-    rule to `.htaccess`. A `curl -u` from **his own computer returns his user**, so the site, username
-    and Application Password work. CDN on/off made no difference.
+    rule to `.htaccess`. A `curl -u` from **his own computer returned his user while the Hostinger CDN was
+    OFF**. After the CDN was switched back on, `/hostinger check` on his computer showed REST and MCP failing
+    again (login header stripped). **Root cause: Hostinger CDN (`Server: hcdn`) strips the `Authorization`
+    header.** Keep the CDN off while using REST/MCP, or ask Hostinger support to pass `Authorization` through
+    for `/wp-json/`. (The cloud-session failure while the CDN was off was a separate proxy issue.)
   - **From the cloud session it still returns `rest_not_logged_in`:** the proxy-saved credential isn't
     being applied yet (possibly a pickup delay after the environment switch). **Reliable path:** Claude
     Code on Rahul's computer with `.env` + `.mcp.json`.
