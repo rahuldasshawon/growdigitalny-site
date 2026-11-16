@@ -16,7 +16,7 @@
 5. **Feed refresh file:** upload `gdny-feed-cache-30min.php` to `public_html/wp-content/mu-plugins/` (if not done yet).
 
 ### Before running ads
-6. **Compliance fixes on the 6 live reviews** (Claude Code, backup plus one approval):
+6. ✅ ~~**Compliance fixes on the 6 live reviews**~~ (done 2026-11-16, verified live: disclosure box first, all affiliate links `rel=sponsored`, Jasper and GearUP links fixed, H1s added on salon and immigration). **Follow-ups:** cut the review CTAs to ≤3 (each has 4–5); fix CapCut's broken `http://Text-to-Speech` link; replace off-topic images (career images on Copy.ai, the Wix editor on Appy Pie and PopAI); fix the immigration page's stock-photo and placeholder-avatar testimonials; shrink the new title bands on mobile (the H1 wraps to 4 lines and fills the first screen); add alt text to the remaining icons. Original item: (Claude Code, backup plus one approval):
    - the FTC disclosure box
    - `rel="sponsored nofollow"` on all 27 affiliate links
    - fixes for Jasper's broken chained links and GearUP's click-ID link
