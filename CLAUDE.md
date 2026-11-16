@@ -134,6 +134,23 @@ who's done the work and is being straight with them.
 - **Conversion without pressure.** Calls to action are specific and low-pressure ("Try the free plan
   on one real task"), with at most 3 CTA buttons per page.
 
+## Tech News hub and weekly Tech Brief
+
+- **`/tech-news/`** (`pages/tech-news.html`) is a WordPress **block-markup** page, not an Elementor page.
+  Built-in RSS blocks show the latest headlines automatically from TechCrunch, The Verge, Wired AI and Ars
+  Technica (feed URLs `[VERIFY]` before publishing). A latest-posts block lists the newest "Tech Brief"
+  posts, and the page has internal links to our reviews and comparisons, a newsletter signup and 3 CTAs.
+  It has no affiliate links, so no disclosure box.
+- **Never auto-publish copied or auto-rewritten news.** The copyright risk and Google's scaled-content
+  policies could pull down the whole site, and ad platforms reject auto-generated news. We show headline +
+  short excerpt + link only.
+- **Weekly Tech Brief:** `/tech-brief` drafts the issue: 5–7 real stories from the last 7 days, written
+  in our own words with "Why it matters" and "What to do", source links, and at most 2 honest product
+  suggestions that link to our review pages. It saves local files and, after Rahul's yes, creates a **draft**
+  post in the "Tech Brief" category. Rahul publishes it and sends the email.
+- **Newsletter tool:** not chosen yet (beehiiv or GetResponse). The signup form placeholder stays until
+  Rahul decides.
+
 ## WordPress publishing workflow
 
 Every page in `pages/`, `content/services/` and `legal/` is a single HTML file built to paste into

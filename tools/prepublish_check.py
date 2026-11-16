@@ -32,10 +32,15 @@ class Links(HTMLParser):
 
 def check(path):
     raw = open(path, encoding="utf-8").read()
-    start = raw.find('<div class="gdny')
+    m = re.search(r'<div class="(?:[^"]*\s)?gdny(?:\s[^"]*)?"', raw)
     block, warn = [], []
-    if start == -1:
+    if not m:
         return ["no .gdny wrapper div found"], []
+    start = m.start()
+    # Block-markup pages (Gutenberg) start with a <!-- wp:... --> comment before the wrapper div.
+    wp = raw.find("<!-- wp:")
+    if wp != -1 and wp < start:
+        start = wp
     head, body = raw[:start], raw[start:]
     if head.strip() and head.count("-->") != 1:
         block.append("header comment is broken (a nested '-->' closes it early, so notes would show on the page)")
