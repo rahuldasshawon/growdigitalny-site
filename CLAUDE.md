@@ -219,6 +219,20 @@ who's done the work and is being straight with them.
   - Consider keeping AdSense off the pages we send paid traffic to, at least at first.
 - AdSense and affiliate links can live on the same page. The affiliate disclosure box still goes at the top.
 
+## Mobile-first (Rahul's priority, 2026-11-16)
+
+- **Check every change on a phone-sized screen first** (about 390×844, e.g. iPhone 13), then on desktop.
+- **A page passes on mobile only if:**
+  - nothing scrolls sideways and no text is clipped
+  - body text is at least 16px (14px minimum for small print)
+  - buttons and links are easy to tap (at least about 44px tall, with spacing)
+  - the H1 fits on 1–3 lines
+  - real content (the intro text or main CTA) is visible on the first screen
+  - images are lazy-loaded, sized for mobile, and in WebP where possible
+- **Speed target (Lighthouse mobile):** LCP under 2.5 s, CLS under 0.1, performance 80 or higher.
+- When reporting a change, include the mobile result (a screenshot description or measurements).
+- Baseline and open issues: `seo/mobile-audit-2026-11-16.md`.
+
 ## WordPress publishing workflow
 
 Every page in `pages/`, `content/services/` and `legal/` is a single HTML file built to paste into
