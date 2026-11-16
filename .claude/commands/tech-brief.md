@@ -29,6 +29,31 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
   you can't open.
 - **If fewer than 3 stories pass verification, don't create an issue.** Write a short note in
   `CHANGELOG.md` saying "no brief today: not enough verified news" and stop.
+- **Quote-backed headlines (required before anything goes into a draft).** For every story, the headline
+  and every name, number, date and attribution in its summary must be backed by an **exact sentence
+  copied from the source article you opened** (verbatim, short). Rules:
+  - **Who said it must match.** Don't attribute a claim to a person unless the quoted sentence names them
+    as the speaker. Words in quotation marks must be the person's own words in the source, not the
+    reporter's paraphrase (e.g. if the article writes `X called for a "shakeup"`, don't write `X said "shakeup"`).
+  - **Keep qualifiers.** "up to 200,000", "about", "reportedly", "expected", "plans to" stay in the headline
+    and summary. Never turn a target, cap or plan into a done fact.
+  - **No facts from outside the quotes.** If a fact needs inference (e.g. adding up two sentences), say so in
+    the evidence file, or leave the fact out.
+  - **Dates come from the article**, with the publisher's publish date recorded. Event dates must be stated
+    in the text, not guessed from a dateline.
+  - If you can't find a supporting sentence, rewrite the headline to what the quote supports, or drop the story.
+- **Evidence file.** Save `content/briefs/<YYYY-MM-DD>-evidence.md` (internal, never published) with one
+  section per story, in the same order as the brief:
+  ```
+  ## <exact H2 headline from the brief>
+  URL: <source URL>
+  Publisher: <name> | Published: <date as printed>
+  Quote: "<exact sentence supporting the headline>"
+  Quote: "<exact sentence for each other name/number/date used>"
+  Note: <any inference or discrepancy between sources>
+  ```
+  The posting script refuses to create the draft if this file is missing, if a story has no URL or no
+  `Quote:` line, or if the number of sections doesn't match the number of H2 headlines.
 - **Corrections:** if an earlier brief turns out to be wrong, tell Rahul right away and propose a visible
   correction line on that post. Never silently edit.
 
@@ -47,9 +72,9 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
   to an affiliate link. Never claim results or testing we haven't done.
 - **Never publish or send.** Rahul publishes and sends the email himself.
   - **Interactive run:** create the **WordPress draft post** only after Rahul says "yes".
-  - **Scheduled morning run** (non-interactive; nobody is there to say yes): you may create the WordPress
-    post as a **draft only**, in the Tech Brief category, so it's ready for Rahul to review over coffee.
-    Never set status to publish, pending or future. Never touch any other post or page.
+  - **Scheduled morning run** (non-interactive): you only write the files in `content/briefs/`
+    (brief .md, .html, newsletter .txt and the evidence file). `automation/post-brief-draft.ps1` then
+    posts it as a **draft only** in the Tech Brief category. You have no WordPress access in that run.
 
 # Steps
 
@@ -60,7 +85,8 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
 3. **Pick 3–5 (daily) or 5–7 (weekly) stories** that matter most for small businesses and marketers, such as AI tools, search and
    SEO changes, ad platforms, social platforms, email and privacy rules, or big product launches. Prefer
    the primary source when one exists.
-4. **Open each source article** and confirm the facts you'll use.
+4. **Open each source article**, copy the exact supporting sentences, and write the evidence file
+   (see **Quote-backed headlines**). Write the headline *from* the quotes, not before them.
 5. **Write the issue** using this structure:
    - Title: "Tech Brief: <the main story in a few words> (<Month D, YYYY>)"
    - A 2-sentence intro: this week in one line
@@ -90,6 +116,8 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
 
 # Quality bar before showing Rahul
 
+- Every headline and fact has a matching `Quote:` line in the evidence file; attributions and qualifiers
+  ("up to", "plans to") match the source exactly.
 - Every story has a working source link inside the time window, and the facts match it. Big claims are
   confirmed by a second trusted or primary source.
 - No sentence is copied from a source (apart from one short, attributed quote at most).
