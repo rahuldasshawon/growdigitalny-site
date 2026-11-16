@@ -157,6 +157,31 @@ who's done the work and is being straight with them.
 - **Newsletter tool:** not chosen yet (beehiiv or GetResponse). The signup form placeholder stays until
   Rahul decides.
 
+## Business details (confirmed by Rahul, 2026-11-16)
+
+- **Operator:** Rahul Das, sole proprietor, trading as Grow Digital NY. **Grow Digital NY LLC is not yet
+  registered.** Never write "LLC" until it is; when it's registered, update the legal pages (one line each).
+- **Contact email:** contact@growdigitalny.com (a Hostinger mailbox).
+- **Mailing address** (legal pages and newsletter footers, as CAN-SPAM requires): 105-18 171st Place, Jamaica,
+  NY 11433, USA. A PO box or virtual mailbox can replace it later.
+- **Governing law:** New York; courts in Queens County.
+- **Affiliate networks in use:** Impact (pxf.io / sjv.io links), FirstPromoter (fpr= / fp_ref=), Rewardful
+  (via=), plus direct programs (GetResponse ?a=).
+
+## Languages (decided 2026-11-16)
+
+- **Phase 1 (now): a free translate button** (GTranslate free plugin, client-side). English is the source and the
+  only indexed version. Languages: Spanish (Latin American; covers Mexico), Hindi, Bengali, Tamil, Telugu,
+  Urdu, Arabic, Italian, plus French, Portuguese, German and Chinese (Simplified).
+- **Phase 2 (before any non-English ads): SEO translations** (TranslatePress or Weglot, pricing `[VERIFY]`) with
+  a URL per language, hreflang, and right-to-left checks for Arabic and Urdu. Ads must land on a page in the
+  same language as the ad.
+- **Rules:**
+  - Legal pages say "The English version is the official version."
+  - Get key landing pages and disclosures human-checked before advertising in a language.
+  - Check each affiliate program's allowed countries.
+  - Never present machine-converted currencies as official prices.
+
 ## WordPress publishing workflow
 
 Every page in `pages/`, `content/services/` and `legal/` is a single HTML file built to paste into
