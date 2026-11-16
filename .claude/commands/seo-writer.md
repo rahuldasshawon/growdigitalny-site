@@ -62,7 +62,7 @@ If the topic above is empty, ask Rahul for a topic or niche and stop.
   - no FTC disclosure box. Add the line "No affiliate links on this page. We don't earn anything if
     you sign up." under the byline, plus any other material connection.
   - up to 3 helpful CTA buttons: "Visit Official Site" (`target="_blank" rel="noopener"`), "Read Case
-    Studies" (only if a real page exists) and "Book Agency Strategy Call" (`/contact/`)
+    Studies" (only if a real page exists) and "Book Agency Strategy Call" (`/contact-us/`)
   - put `<!-- [AFFILIATE LINK: PENDING] -->` next to each outbound CTA, and add "Monetize later" to the
     file header. **Never** put the placeholder in an `href`, and never invent or guess a referral link.
   - same depth and honesty as affiliate reviews: verified facts, pros and cons, alternatives, FAQ,
@@ -90,7 +90,7 @@ If the topic above is empty, ask Rahul for a topic or niche and stop.
   and short definitions, and add FAQ sections that answer real questions.
 - Include an FAQ plus a `FAQPage` JSON-LD block that matches the visible FAQ.
 - Service pages also get a `ProfessionalService` JSON-LD block with `"areaServed": "Worldwide"` and a
-  `[VERIFY]` email, plus a clear call to action (book a call or contact form at `/contact/`).
+  `[VERIFY]` email, plus a clear call to action (book a call or contact form at `/contact-us/`).
 - Add 3 to 5 internal link suggestions to existing pages, plus 1 or 2 external links to authoritative
   sources where useful (plain `rel="noopener"`, not sponsored).
 

@@ -73,7 +73,7 @@ monetize them later without a rewrite.
     (no `sponsored`, no `nofollow` needed)
   - "Read Case Studies": **only** if a real case-studies page exists (the vendor's or ours). Never
     link to a placeholder or invent one.
-  - "Book Agency Strategy Call": links to `/contact/`, for readers who want help implementing the tool
+  - "Book Agency Strategy Call": links to `/contact-us/`, for readers who want help implementing the tool
 - **Monetization placeholder:** next to every outbound "Visit Official Site" CTA, add the HTML comment
   `<!-- [AFFILIATE LINK: PENDING] -->`, and list the page under "Monetize later" in the file header.
   **Never put the placeholder in an `href`.** A live page must not have broken links.
@@ -314,6 +314,48 @@ you act**. The `/hostinger` command handles this.
 **Pending offers:** don't add an affiliate CTA until the clean link is in this table. Until then, write
 the page as a **non-affiliate review** (see "Non-affiliate reviews and guides"). It can be published,
 and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize later.
+
+## Live site inventory (from the site's llms.txt, checked 2026-11-16)
+
+**Real URLs. Always link to these, never to redirects:** contact `/contact-us/`, terms
+`/terms-conditions/`, privacy `/privacy-policy/`, services hub `/services/`, about `/about-us/`.
+`/affiliate-disclosure/` **doesn't exist yet (404)** and must go live before any review.
+
+**Live pages:**
+- **Reviews:** `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,
+  `/capcut-review-2026/`, `/appy-pie-ai-review-2026/` (note the `-ai-`), `/jasper-ai-review-pricing-2026/`
+- **Industry pages:** `/hotel-motel-marketing/`, `/car-dealership-marketing/`, `/restaurant-marketing/`,
+  `/real-estate-marketing/`, `/life-insurance-marketing/`, `/event-management-marketing/`,
+  `/salon-beauty-business-marketing/`, `/immigration-lawyer-marketing/`
+- **Other:** `/services/`, `/about-us/`, `/about/` (looks empty, a duplicate), `/customer-cabinet/`
+  (purpose unknown, check before touching), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
+  and the default post `/hello-world/`
+
+**Problems found on live pages (fix with backups and Rahul's OK):**
+- **Fake or unverifiable trust signals:**
+  - Home: "New York's #1 Digital Agency". An unverifiable superlative is an ad-policy risk, and it
+    contradicts the global positioning.
+  - Home: stats counters still show 0.
+  - Jasper page: "⭐⭐⭐⭐⭐ Trusted by thousands of marketers worldwide".
+  - Appy Pie and Copy.ai pages: "Trusted by thousands…" lines.
+
+  All of these break ground rule 4. Remove them or replace them with verified facts.
+- **GearUP Booster** is still described as a career tool. It's a gaming ping/lag booster (Phase 3 rewrite).
+- **The 8 industry pages are written for New York only** ("NYC", "near me"). That conflicts with the
+  global positioning. **Ask Rahul:** rewrite them as global industry pages, or keep a deliberate NY
+  local offer. The immigration-lawyer page also needs care: attorney advertising rules apply to the
+  lawyers, so don't promise case outcomes.
+- **Live Privacy Policy and Terms** are thin. `legal/privacy-policy.html` and `legal/terms.html`
+  **replace their content** (back up first). Don't create second pages.
+- **Housekeeping (needs Rahul's OK):** delete or redirect `/hello-world/`, merge `/about/` into
+  `/about-us/`, and check what `/customer-cabinet/` is for.
+- **Site connection facts:**
+  - The site has the Hostinger AI plugin, the MCP namespace, Hostinger Tools, Hostinger Reach and an
+    Elementor MCP composer.
+  - **Application Passwords are currently disabled** (the REST index advertises no auth methods).
+    Rahul must turn off *Hostinger Tools → Disable application passwords* before REST or MCP logins work.
+  - `llms.txt` also lists a Hostinger-hosted agent MCP endpoint,
+    `websites-agents.hostinger.com/growdigitalny.com/mcp` (auth method `[VERIFY]`).
 
 ## Task list (in order)
 

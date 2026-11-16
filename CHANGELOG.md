@@ -118,3 +118,14 @@
     ground rules (drafts only, Rahul's yes before changes, never publish or delete).
   - `/hostinger`: MCP is now the first connection option, and `check` tests it with a troubleshooting list.
   - Not connected in this cloud session: the placeholder credentials in the request were not used, and the site is blocked from here.
+- LIVE SITE INVENTORY + SITE CONNECTION (2026-11-16):
+  - New cloud environment `growdigitalny-site` (personal, only for this repo) with the WordPress login saved as a network secret
+    (entered by Rahul in a secure form, never seen by Claude). First read-only test: 401 `rest_not_logged_in`, because Application
+    Passwords are disabled on the site. Rahul needs to switch off "Disable application passwords" in Hostinger Tools and create an
+    Application Password.
+  - From the site's llms.txt (and live URL checks): added a "Live site inventory" section to CLAUDE.md covering real URLs, live pages,
+    fake trust signals on Home/Jasper/Appy Pie/Copy.ai, GearUP still wrong, 8 NYC-only industry pages (decision needed), and
+    housekeeping items.
+  - All drafts now link to the real URLs: `/contact/` -> `/contact-us/`, `/terms/` -> `/terms-conditions/` (13 files).
+  - `legal/privacy-policy.html` and `legal/terms.html` are now marked as REPLACING the existing live pages (after backup); the
+    terms slug is now `terms-conditions`.

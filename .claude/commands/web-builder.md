@@ -96,7 +96,7 @@ If the brief above is empty, ask Rahul for the page goal, audience and main call
   - no FTC disclosure box. Add the line "No affiliate links on this page. We don't earn anything if
     you sign up." under the byline, plus any other material connection.
   - up to 3 helpful CTA buttons: "Visit Official Site" (`target="_blank" rel="noopener"`), "Read Case
-    Studies" (only if a real page exists) and "Book Agency Strategy Call" (`/contact/`)
+    Studies" (only if a real page exists) and "Book Agency Strategy Call" (`/contact-us/`)
   - put `<!-- [AFFILIATE LINK: PENDING] -->` next to each outbound CTA, and add "Monetize later" to the
     file header. **Never** put the placeholder in an `href`, and never invent or guess a referral link.
   - same depth and honesty as affiliate reviews: verified facts, pros and cons, alternatives, FAQ,
