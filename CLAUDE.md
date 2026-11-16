@@ -182,6 +182,41 @@ who's done the work and is being straight with them.
   - Check each affiliate program's allowed countries.
   - Never present machine-converted currencies as official prices.
 
+## Monetization: sponsored content and Google AdSense (Rahul's choice, 2026-11-16)
+
+**Sponsored content (paid articles, reviews or newsletter mentions):**
+- Label every sponsored item **"Sponsored"** at the very top (posts) or right next to the mention
+  (newsletter), and say who paid: "Sponsored by <Brand>".
+- **Every link a sponsor pays for gets `rel="sponsored"`.** Never sell "dofollow" links or links disguised as
+  editorial links. It breaks Google's spam policies and can get the whole site demoted.
+- The sponsor doesn't approve our opinions, and the verification and no-fake-claims rules still apply. Only
+  accept sponsors Rahul would recommend. Refuse gambling, crypto get-rich schemes, "make money fast" and
+  anything illegal or misleading.
+- Keep a record of each deal (sponsor, date, fee, page) in `CHANGELOG.md` or a private sheet.
+
+**Google AdSense:**
+- **Approval prerequisites:**
+  - the site is live and public, with real, original, substantial content (the thin 300–450-word reviews
+    and empty pages lower the odds; publish the in-depth drafts first)
+  - a clear About, Contact and Privacy Policy (with the AdSense cookie wording, already in
+    `legal/privacy-policy.html`)
+  - navigation with no dead `#` links
+- **Must-haves once approved:**
+  - `ads.txt` in the site root, with the line from AdSense
+  - a **Google-certified consent banner (CMP, IAB TCF)** before serving ads to the EEA, UK and Switzerland
+  - the privacy-policy AdSense row and section live
+- **Placement rules:**
+  - Ads must look clearly different from content and from our CTA buttons.
+  - No ads that push the main content down or sit right next to affiliate buttons in a way that invites
+    accidental clicks.
+  - Don't place ads on legal pages, the contact page, thin pages or error pages.
+- **Never** click our own ads, ask anyone to click them, or send paid or incentivized traffic in ways AdSense
+  prohibits.
+  - Running Microsoft or Google Ads to pages that show AdSense is allowed, but watch the traffic quality,
+    because invalid traffic can get the AdSense account closed.
+  - Consider keeping AdSense off the pages we send paid traffic to, at least at first.
+- AdSense and affiliate links can live on the same page. The affiliate disclosure box still goes at the top.
+
 ## WordPress publishing workflow
 
 Every page in `pages/`, `content/services/` and `legal/` is a single HTML file built to paste into
