@@ -385,7 +385,23 @@ search:
 - a real About page with the founder's actual experience
 - consistent brand details across the web
 
-**Problems found on live pages (fix with backups and Rahul's OK):**
+**✅ DONE 2026-11-16 (via the WordPress MCP on Rahul's PC, with backups and per-page approval):**
+- Fake trust signals removed and verified live: the homepage "#1" label, both counter rows (including a
+  hidden one with "8x ROI"), and the ⭐⭐⭐⭐⭐ "Trusted by…" lines on all 6 review pages.
+- Homepage New York lines rewritten for the global positioning, with a Yoast meta and OG description set.
+- Titles, H1s and SEO titles on all 6 reviews changed from 2026 to 2027 (URLs unchanged). The wrong
+  "PopAI" titles on the Copy.ai and GearUP pages are fixed, and GearUP has a neutral meta description.
+- Still open:
+  - Rahul's Elementor "Update" clicks on the 7 pages, to refresh the stale `post_content` copy (also
+    fixes CapCut's star-emoji share image)
+  - the GearUP body rewrite (most urgent)
+  - the homepage Client Results and testimonials (decision pending)
+  - chained Jasper referral links
+  - Appy Pie's unverified "free trial" meta
+  - brand-spelling consistency (Pop AI/PopAI, GearUp/GearUP)
+  - 10 more plugin updates, one at a time with a backup first (Elementor already updated by Rahul)
+
+**Problems found on live pages (original list; see DONE above — fix with backups and Rahul's OK):**
 - **Fake or unverifiable trust signals:**
   - Home: "New York's #1 Digital Agency". An unverifiable superlative is an ad-policy risk, and it
     contradicts the global positioning.
