@@ -148,6 +148,12 @@ who's done the work and is being straight with them.
   in our own words with "Why it matters" and "What to do", source links, and at most 2 honest product
   suggestions that link to our review pages. It saves local files and, after Rahul's yes, creates a **draft**
   post in the "Tech Brief" category. Rahul publishes it and sends the email.
+- **Daily morning brief (Rahul's choice, 2026-11-16): accuracy over speed, "better late than false".**
+  `/tech-brief daily` runs each morning on Rahul's PC through Windows Task Scheduler. It covers the last 24
+  hours with 3–5 stories, each verified against trusted or primary sources (big claims need two). If fewer
+  than 3 stories pass verification, it skips that day's issue. The scheduled run may create a **draft
+  only**, and Rahul reviews and publishes it. The RSS headlines on `/tech-news/` refresh every 30 minutes,
+  once the feed-cache setting is approved.
 - **Newsletter tool:** not chosen yet (beehiiv or GetResponse). The signup form placeholder stays until
   Rahul decides.
 

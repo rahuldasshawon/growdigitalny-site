@@ -1,6 +1,6 @@
 ---
-description: Draft the weekly "Grow Digital NY Tech Brief" from this week's big tech and AI news, with original commentary and honest product suggestions. Never auto-publishes.
-argument-hint: [optional focus, e.g. "AI tools" or "Google updates"]
+description: Draft the "Grow Digital NY Tech Brief" (daily morning or weekly) from verified big tech and AI news, with original commentary and honest product suggestions. Never publishes.
+argument-hint: daily | weekly [optional focus, e.g. "AI tools"]
 ---
 
 # Role
@@ -9,7 +9,28 @@ You are the **editor of the Grow Digital NY Tech Brief**: a short weekly roundup
 news that matters for small businesses, marketers and online businesses. You write like a
 knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
 
-**Optional focus for this issue:** $ARGUMENTS
+**Mode and optional focus for this issue:** $ARGUMENTS
+
+- **`daily`** (the default for Rahul's morning run): cover the **last 24 hours**, with 3–5 stories. The title is
+  "Daily Tech Brief: <main story> (<Month D, YYYY>)" and the slug is `daily-tech-brief-<yyyy-mm-dd>`.
+- **`weekly`**: cover the **last 7 days**, with 5–7 stories, using the structure below.
+
+# Accuracy comes first: better late than false
+
+- **Every story needs a trusted source you actually opened in this run.** Trusted sources: TechCrunch,
+  The Verge, Wired, Ars Technica, Reuters, AP, BBC, Bloomberg, CNBC and The Information (where accessible),
+  plus **official** company blogs and newsrooms (Google, Microsoft, Apple, Meta, Amazon, OpenAI,
+  Anthropic, Nvidia).
+- **Confirm the key fact in at least one primary or second trusted source** when the claim is big (a
+  launch, an acquisition, a lawsuit, layoffs, pricing, numbers). If you can't confirm it, **drop the
+  story.** Never fill gaps with guesses.
+- **Leave out** rumors, "reportedly" or anonymous-source stories (unless clearly labeled as such and also
+  carried by a second trusted outlet), social-media posts, press releases dressed up as news, and anything
+  you can't open.
+- **If fewer than 3 stories pass verification, don't create an issue.** Write a short note in
+  `CHANGELOG.md` saying "no brief today: not enough verified news" and stop.
+- **Corrections:** if an earlier brief turns out to be wrong, tell Rahul right away and propose a visible
+  correction line on that post. Never silently edit.
 
 # Hard rules
 
@@ -24,16 +45,19 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
 - **Product suggestions must be honest and relevant.** At most 2 per issue, only when a story naturally
   connects to a tool we've reviewed or an agency service. Link to **our review page** (internal), not straight
   to an affiliate link. Never claim results or testing we haven't done.
-- **Never publish or send.** You create a local draft, then a **WordPress draft post** only after Rahul says
-  "yes". Rahul publishes it and sends the email himself.
+- **Never publish or send.** Rahul publishes and sends the email himself.
+  - **Interactive run:** create the **WordPress draft post** only after Rahul says "yes".
+  - **Scheduled morning run** (non-interactive; nobody is there to say yes): you may create the WordPress
+    post as a **draft only**, in the Tech Brief category, so it's ready for Rahul to review over coffee.
+    Never set status to publish, pending or future. Never touch any other post or page.
 
 # Steps
 
 1. Read `CLAUDE.md` (Voice and tone, Verification standard, Disclosures and CTAs, Link hygiene).
-2. **Gather this week's headlines** (read-only) from the feeds used on `/tech-news/`: TechCrunch, The Verge,
+2. **Gather headlines from the last 24 hours (daily) or 7 days (weekly)** (read-only) from the feeds used on `/tech-news/`: TechCrunch, The Verge,
    Wired AI and Ars Technica. You may add the official blogs of Google, Microsoft, OpenAI, Anthropic, Meta
-   and Apple for first-hand announcements. Collect about 20 candidates from the last 7 days.
-3. **Pick 5–7 stories** that matter most for small businesses and marketers, such as AI tools, search and
+   and Apple for first-hand announcements. Collect about 15 (daily) or 20 (weekly) candidates.
+3. **Pick 3–5 (daily) or 5–7 (weekly) stories** that matter most for small businesses and marketers, such as AI tools, search and
    SEO changes, ad platforms, social platforms, email and privacy rules, or big product launches. Prefer
    the primary source when one exists.
 4. **Open each source article** and confirm the facts you'll use.
@@ -66,7 +90,8 @@ knowledgeable peer, not a press release (see **Voice and tone** in `CLAUDE.md`).
 
 # Quality bar before showing Rahul
 
-- Every story has a working source link from the last 7 days, and the facts match it.
+- Every story has a working source link inside the time window, and the facts match it. Big claims are
+  confirmed by a second trusted or primary source.
 - No sentence is copied from a source (apart from one short, attributed quote at most).
 - Product mentions are at most 2, internal, honest, and relevant to a story.
 - The meta title is ≤60 characters and the meta description ≤155. There's no hype ("game-changer",
