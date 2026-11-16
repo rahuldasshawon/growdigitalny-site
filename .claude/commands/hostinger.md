@@ -22,6 +22,9 @@ If that's empty or `help`, list the tasks below in one short table and stop.
 3. Load the variables for your commands with `set -a; . ./.env; set +a`. Never echo, log or commit
    their values, and never paste them into chat.
 4. Pick the connection method:
+   - **WordPress MCP** (`growdigitalny-wordpress` in `.mcp.json`, via the Hostinger AI plugin) if its
+     tools are available in this session. It's best for reading content and creating drafts. The same
+     safety rules apply: drafts only, and Rahul's yes before any change.
    - **SSH + WP-CLI** if `SSH_HOST`, `SSH_USER` and `WP_PATH` are set. Use
      `ssh -p "${SSH_PORT:-65002}" -o BatchMode=yes -o ConnectTimeout=15 "$SSH_USER@$SSH_HOST" "wp --path='$WP_PATH' …"`
      (`BatchMode` means key-based login only, with no password prompts).
@@ -64,7 +67,14 @@ If that's empty or `help`, list the tasks below in one short table and stop.
    - active plugins, flagging Elementor, Yoast or Rank Math, LiteSpeed Cache and any security plugins
    - whether the WP user is an Administrator (needed for `unfiltered_html`, so Custom HTML blocks
      keep `<style>` and `<script>`)
-5. End with a table showing each method as **Working**, **Not set up** or **Failing (why)**, and
+5. **MCP test:** check whether `growdigitalny-wordpress` tools are available (`/mcp`), and list the
+   abilities it exposes. If it's missing:
+   - is Claude Code running from the project folder?
+   - were `WP_USER` and `WP_APP_PASSWORD` exported before starting Claude Code?
+   - is the Hostinger AI plugin active?
+   - is "Disable application passwords" off in Hostinger Tools?
+   - is Node.js installed?
+6. End with a table showing each method (MCP, SSH, REST) as **Working**, **Not set up** or **Failing (why)**, and
    the one next step Rahul should take.
 
 ## `backup`: snapshot before changes (writes only backup files)

@@ -217,6 +217,25 @@ you act**. The `/hostinger` command handles this.
   2. **WordPress REST API** with an Application Password. Works on every plan.
   3. **hPanel by hand.** For anything else (backups restore, staging, DNS, SSL, PHP version), give
      Rahul exact click-by-click steps rather than guessing.
+- **WordPress MCP (Hostinger AI plugin).** The project's `.mcp.json` defines the
+  `growdigitalny-wordpress` MCP server. It goes through `@automattic/mcp-wordpress-remote` to
+  `https://growdigitalny.com/wp-json/mcp/mcp-adapter-default-server`, and authenticates with the same
+  `WP_USER` / `WP_APP_PASSWORD` from the environment.
+  - **No secrets in `.mcp.json`:** it only references `${WP_USER}` and `${WP_APP_PASSWORD}`.
+    Start Claude Code with them loaded: `set -a; . ./.env; set +a; claude`.
+  - **Requirements:**
+    - the Hostinger AI plugin is active (preinstalled on Business and Cloud plans `[VERIFY]`; otherwise
+      *Plugins → Add New → search "Hostinger"*)
+    - *Hostinger Tools → "Disable application passwords"* is **off**
+    - Node.js is installed locally
+  - **Use a dedicated WordPress user** (e.g. `claude-code`, role **Editor**) with its own Application
+    Password, so access can be revoked without touching Rahul's admin login. On a single-site install,
+    Editors keep `unfiltered_html`, so Custom HTML pages save intact.
+  - **MCP tools follow every ground rule:** back up before changes, create drafts only, show Rahul the
+    plan and wait for his yes, never publish or delete, and log changes. Listing or reading content is
+    fine without asking. Check what the abilities do (`/mcp`) before using a new one.
+  - Run `/mcp` in Claude Code to confirm the server is connected. Cloud sessions usually can't reach
+    the site, so use it from Rahul's own computer.
 - **Use SSH keys, not passwords.** Rahul adds his public key in *hPanel → SSH Access → SSH keys*.
   Never ask for or store an SSH password or private key in the repo or chat.
 - **Run hosting work from Claude Code on Rahul's own computer**, where his SSH key and `.env` live.

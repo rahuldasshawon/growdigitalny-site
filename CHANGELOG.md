@@ -110,3 +110,11 @@
     and `health` (read-only status, SSL expiry, available updates listed but never applied). Every change needs Rahul's yes.
   - `.env.example`: added SSH_PORT=65002 and Hostinger hints for SSH_HOST, SSH_USER and WP_PATH.
   - `/ad-manager`: Hostinger added to pending offers (no paid ads yet), plus promo/renewal price and brand-bidding rules.
+- WORDPRESS MCP CONNECTION (2026-11-16):
+  - New `.mcp.json`: `growdigitalny-wordpress` MCP server, via `npx @automattic/mcp-wordpress-remote`, pointing to
+    https://growdigitalny.com/wp-json/mcp/mcp-adapter-default-server (Hostinger AI plugin). Credentials come only from the
+    `${WP_USER}`/`${WP_APP_PASSWORD}` env vars, with no secrets in the file. OAuth is disabled (Application Password auth).
+  - `CLAUDE.md` Hosting section: MCP requirements, a dedicated Editor user, start command, and MCP tools bound by all
+    ground rules (drafts only, Rahul's yes before changes, never publish or delete).
+  - `/hostinger`: MCP is now the first connection option, and `check` tests it with a troubleshooting list.
+  - Not connected in this cloud session: the placeholder credentials in the request were not used, and the site is blocked from here.
