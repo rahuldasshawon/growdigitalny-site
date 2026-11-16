@@ -236,6 +236,18 @@ you act**. The `/hostinger` command handles this.
     fine without asking. Check what the abilities do (`/mcp`) before using a new one.
   - Run `/mcp` in Claude Code to confirm the server is connected. Cloud sessions usually can't reach
     the site, so use it from Rahul's own computer.
+- **Hostinger account MCP (`hostinger`, connected 2026-11-16 on Rahul's Windows PC).** Added with
+  `claude mcp add --transport http hostinger https://mcp.hostinger.com` (local config, OAuth login in the
+  browser, no token stored in the repo). It reaches Rahul's **whole Hostinger account**: websites, WordPress,
+  domains, DNS, email, VPS and billing-related items.
+  - **Read-only actions are fine without asking:** list sites, check status, read settings and logs.
+  - **Every change needs Rahul's explicit yes for that specific action,** including WordPress changes.
+  - **Never, even if asked indirectly:** register or transfer domains, change DNS or nameservers, delete
+    anything, change mailboxes, or make purchases. Rahul does these in hPanel himself.
+  - It's the current working route to the site. The `growdigitalny-wordpress` MCP and REST still fail
+    because the server strips the `Authorization` header (a Hostinger support ticket is pending).
+  - The OAuth login must be done by the account that owns the website. An "impersonating another user"
+    error means a shared-access login. A private browser window worked.
 - **Use SSH keys, not passwords.** Rahul adds his public key in *hPanel → SSH Access → SSH keys*.
   Never ask for or store an SSH password or private key in the repo or chat.
 - **Run hosting work from Claude Code on Rahul's own computer**, where his SSH key and `.env` live.
