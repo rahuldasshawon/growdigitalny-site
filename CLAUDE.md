@@ -434,7 +434,7 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
 
 **Real URLs. Always link to these, never to redirects:** contact `/contact-us/`, terms
 `/terms-conditions/`, privacy `/privacy-policy/`, services hub `/services/`, about `/about-us/`.
-`/affiliate-disclosure/` **doesn't exist yet (404)** and must go live before any review.
+`/affiliate-disclosure/` ✅ **live since 2026-11-16 (page 4276)**. Privacy and Terms were replaced the same day (the Terms page title is now "Terms of Use", URL unchanged).
 
 **Live pages:**
 - **Reviews:** `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,

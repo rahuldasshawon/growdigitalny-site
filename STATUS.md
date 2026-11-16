@@ -6,9 +6,9 @@
 1. **Daily Tech Brief draft #4273: DO NOT publish yet.** None of its 3 headlines could be independently
    confirmed: Nvidia/Bessent, Apple's "200,000" study, and the Vulcan/Amazon Leo result. Run the evidence-check
    prompt in Claude Code first, and publish only if every story is backed by a quoted source.
-2. **Create the mailbox `contact@growdigitalny.com`** in hPanel → Emails, and send it a test email. It's needed
+2. ✅ ~~**Create the mailbox `contact@growdigitalny.com`**~~ (done 2026-11-16: test email received; Contact Form 7 sends to it; email shown on the Contact page and in the footer). in hPanel → Emails, and send it a test email. It's needed
    before the legal pages go live.
-3. **Legal pages:** answer Claude Code's 4 questions, then approve publishing:
+3. ✅ ~~**Legal pages:**~~ (done 2026-11-16: `/privacy-policy/` and `/terms-conditions/` replaced, `/affiliate-disclosure/` created as page 4276; all live, verified, 0 `[VERIFY]` left). answer Claude Code's 4 questions, then approve publishing:
    - replace `/privacy-policy/` and `/terms-conditions/` (after a backup)
    - create `/affiliate-disclosure/`
 4. **The language menu:** save the settings in **Settings → GTranslate** (floating menu bottom-right, the 12
