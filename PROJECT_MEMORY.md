@@ -80,6 +80,9 @@ Read this first, then `CLAUDE.md` (the full rules), then `STATUS.md` (open items
 
 ## Rules that matter most (details in `CLAUDE.md`)
 
+- **Always end replies with a ready-to-paste Claude Code prompt for Rahul's PC** when the work touches the live site
+  or Hostinger (standing request, 2026-11-16).
+
 - **No fake trust signals.** Every price, plan limit or feature must be verified on the **vendor's own site**, or
   marked `[VERIFY]`.
 - **Back up → show the plan → wait for Rahul's "yes" → change → verify → log in `CHANGELOG.md`.**

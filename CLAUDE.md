@@ -6,6 +6,13 @@ affiliate offers. Work through the task list below in order.
 
 > **New Claude session? Read `PROJECT_MEMORY.md` first (a one-page summary), then `STATUS.md` for open items.**
 
+> **Always give Rahul a Claude Code prompt for his PC (Rahul's standing request, 2026-11-16).** Whenever a reply
+> involves work on the live site, Hostinger, or anything a cloud session can't do, end it with a ready-to-paste
+> prompt for Claude Code on his Windows PC, in its own code block. The prompt must stand alone (that session doesn't
+> see this chat), restate the safety rules that apply (back up first, drafts only unless Rahul approved publishing,
+> show the plan for live changes), say what to report back, and avoid inline JSON in PowerShell (write JSON to a
+> file first, because PowerShell 5.1 strips the quotes).
+
 ## Brand positioning
 
 GrowDigitalNY is a **global, remote-first digital marketing and web development agency**. It is
