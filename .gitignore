@@ -10,3 +10,10 @@ backups/
 .DS_Store
 __pycache__/
 *.pyc
+
+# Local-only files on Rahul's PC (may hold secrets or private data)
+logs/
+.claude/settings.local.json
+*.log
+*.zip
+scratchpad/
