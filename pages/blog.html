@@ -1,19 +1,14 @@
 <!--
-  Blog hub: page for growdigitalny.com
-  Slug: blog   Status: create as DRAFT
-  FORMAT: WordPress BLOCK markup (default editor, NOT Elementor), like /tech-news/. Copy from the wp:group line
-  to the end of the file, never this comment.
-  PURPOSE: one place that connects every review, comparison and Tech Brief. Add "Blog" to the main menu
-  (header) pointing to /blog/.
-  BEFORE PUBLISHING:
-   1. Links to pages that aren't published yet return 404. Publish those pages first, or remove their cards.
-      Live now: Jasper, Copy.ai, Appy Pie, PopAI, GearUP, CapCut. Drafts: everything else.
-   2. The latest-posts block shows Tech Brief posts (category ID 12). It's empty until the first brief is published.
-   3. Internal links only (no affiliate links on this page), so no disclosure box is needed.
-   4. CTA buttons: 2. Mobile-first: cards stack into one column on phones.
-   Meta title (≤60):       Blog: AI & Marketing Tool Reviews 2027 | Grow Digital NY
-   Meta description (≤155): Honest reviews and comparisons of AI writing, email, newsletter, sales and marketing tools, plus our daily tech brief. Find the right tool fast.
+  Blog hub: growdigitalny.com
+  Slug: blog   Status: LIVE (published 2026-11-16, page 4282). Trimmed to live pages only: the 15 cards for unpublished pages, the Comparisons and Tech news sections and the Tech News button were removed. The full original is in git history (commit 318542f); add each card back when its page goes live.
+  This file mirrors the WordPress content (synced read-only from WordPress on 2026-11-16 by the cloud session).
+  HOW TO USE: In WordPress, edit page 4282 in the default block editor (Code editor view) and paste everything from the opening wp:group / .gdny div to the end of the file.
+  DO NOT paste this comment: it would appear in your public page source.
+  ONE H1: the page template hides the theme title.
+  Meta title (60 max):       Blog: AI & Marketing Tool Reviews 2027 | Grow Digital NY
+  Meta description (155 max): Honest reviews of AI writing, email, marketing and video tools, with real pros, cons and pricing. Find the right tool for your business fast.
 -->
+
 <!-- wp:group {"className":"gdny gdny-blog","layout":{"type":"constrained"}} -->
 <div class="wp-block-group gdny gdny-blog">
 <!-- wp:html -->
@@ -42,45 +37,25 @@
 @media(max-width:900px){.gdny .cards{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.gdny{font-size:16px}.gdny h1{font-size:1.75rem}.gdny h2{font-size:1.25rem}.gdny .cards{grid-template-columns:1fr}.gdny .btn{display:block;text-align:center;margin:8px 0}}
 </style>
-<h1>Blog: Honest Tool Reviews, Comparisons &amp; Tech News</h1>
-<p class="lead">Trying to pick the right AI or marketing tool? Start with a comparison, dig into a full review, or catch up on today's tech news, explained in plain English.</p>
+<h1>Blog: Honest AI &amp; Marketing Tool Reviews</h1>
+<p class="lead">Trying to pick the right AI or marketing tool? Each review covers what the tool does, what it costs, real pros and cons, and who it's not for. We add new reviews and comparisons here as they're published.</p>
 <ul class="jump">
-  <li><a href="#compare">Comparisons</a></li>
   <li><a href="#ai-writing">AI writing</a></li>
   <li><a href="#marketing">Marketing &amp; sales</a></li>
   <li><a href="#video-apps">Video, apps &amp; more</a></li>
-  <li><a href="#news">Tech news</a></li>
 </ul>
 
-<h2 id="compare">Start here: side-by-side comparisons</h2>
-<div class="cards">
-  <a class="card" href="/best-ai-writing-tools/"><span class="tag">Comparison</span><strong>Best AI Writing Tools 2027</strong><span>Jasper, Copy.ai, Rytr, Writesonic and more, and who each one is for.</span></a>
-  <a class="card" href="/best-email-marketing-tools/"><span class="tag">Comparison</span><strong>Best Email Marketing Tools 2027</strong><span>MailerLite, Klaviyo, ActiveCampaign, GetResponse and more, by business type.</span></a>
-  <a class="card" href="/best-newsletter-platforms/"><span class="tag">Comparison</span><strong>Best Newsletter Platforms 2027</strong><span>beehiiv, Substack, Kit, Ghost and more, for growing and monetizing a list.</span></a>
-  <a class="card" href="/best-ai-sdr-tools/"><span class="tag">Comparison</span><strong>Best AI SDR Tools 2027</strong><span>Do you actually need an AI sales rep? An honest buyer's guide.</span></a>
-</div>
 
 <h2 id="ai-writing">AI writing tool reviews</h2>
 <div class="cards">
   <a class="card" href="/jasper-ai-review-pricing-2026/"><span class="tag">Review</span><strong>Jasper AI Review 2027</strong><span>Brand-voice AI writing for marketing teams.</span></a>
   <a class="card" href="/copy-ai-review-2026/"><span class="tag">Review</span><strong>Copy.ai Review 2027</strong><span>AI copy and go-to-market workflows.</span></a>
-  <a class="card" href="/rytr-review/"><span class="tag">Review</span><strong>Rytr Review 2027</strong><span>A budget AI writer for short-form copy.</span></a>
-  <a class="card" href="/writesonic-review/"><span class="tag">Review</span><strong>Writesonic Review 2027</strong><span>AI writing plus AI-search visibility (GEO).</span></a>
-  <a class="card" href="/simplified-review/"><span class="tag">Review</span><strong>Simplified Review 2027</strong><span>Write, design and schedule social posts in one app.</span></a>
-  <a class="card" href="/contentbot-review/"><span class="tag">Review</span><strong>ContentBot Review 2027</strong><span>AI blog writing and content automation.</span></a>
-  <a class="card" href="/paragraphai-review/"><span class="tag">Review</span><strong>ParagraphAI Review 2027</strong><span>AI writing help on your phone and in your browser.</span></a>
-  <a class="card" href="/neuroflash-review/"><span class="tag">Review</span><strong>neuroflash Review 2027</strong><span>On-brand AI content for marketing teams.</span></a>
-  <a class="card" href="/ai-writer-review/"><span class="tag">Review</span><strong>AI-Writer Review 2027</strong><span>AI articles that come with source citations.</span></a>
 </div>
 
 <h2 id="marketing">Marketing, email &amp; sales platforms</h2>
 <div class="cards">
   <a class="card" href="/gohighlevel-review/"><span class="tag">Review</span><strong>GoHighLevel Review 2027</strong><span>An all-in-one CRM, funnels and SMS platform for agencies.</span></a>
   <a class="card" href="/getresponse-review/"><span class="tag">Review</span><strong>GetResponse Review 2027</strong><span>Email marketing, automation, webinars and courses.</span></a>
-  <a class="card" href="/systeme-io-review/"><span class="tag">Review</span><strong>Systeme.io Review 2027</strong><span>Free funnels, email and courses for solo creators.</span></a>
-  <a class="card" href="/beehiiv-review/"><span class="tag">Review</span><strong>beehiiv Review 2027</strong><span>Grow and monetize a newsletter.</span></a>
-  <a class="card" href="/salesforge-review/"><span class="tag">Review</span><strong>Salesforge Review 2027</strong><span>AI cold email at scale, done safely.</span></a>
-  <a class="card" href="/journeybee-review/"><span class="tag">Review</span><strong>Journeybee Review 2027</strong><span>Partner relationship management for B2B SaaS.</span></a>
 </div>
 
 <h2 id="video-apps">Video, apps &amp; more</h2>
@@ -91,17 +66,9 @@
   <a class="card" href="/gearup-booster-review-2026/"><span class="tag">Review</span><strong>GearUP Booster Review 2027</strong><span>A game network booster for lower ping and lag.</span></a>
 </div>
 
-<h2 id="news">Tech news &amp; the Daily Tech Brief</h2>
-<p>The biggest tech and AI stories each morning, checked against trusted sources, with what they mean for your business.</p>
-<!-- /wp:html -->
-
-<!-- wp:latest-posts {"categories":[{"id":12}],"postsToShow":5,"displayPostDate":true,"displayPostContent":true,"excerptLength":25} /-->
-
-<!-- wp:html -->
 <div class="final">
   <h2>Need help choosing or setting up a tool?</h2>
   <p>We set up websites, SEO and lead-generation systems for businesses worldwide.</p>
-  <a class="btn" href="/tech-news/">See Today's Tech News →</a>
   <a class="btn" href="/contact-us/">Book a Strategy Call →</a>
 </div>
 <!-- /wp:html -->

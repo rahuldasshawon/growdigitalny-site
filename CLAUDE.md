@@ -6,6 +6,13 @@ affiliate offers. Work through the task list below in order.
 
 > **New Claude session? Read `PROJECT_MEMORY.md` first (a one-page summary), then `STATUS.md` for open items.**
 
+> **Always give Rahul a Claude Code prompt for his PC (Rahul's standing request, 2026-11-16).** Whenever a reply
+> involves work on the live site, Hostinger, or anything a cloud session can't do, end it with a ready-to-paste
+> prompt for Claude Code on his Windows PC, in its own code block. The prompt must stand alone (that session doesn't
+> see this chat), restate the safety rules that apply (back up first, drafts only unless Rahul approved publishing,
+> show the plan for live changes), say what to report back, and avoid inline JSON in PowerShell (write JSON to a
+> file first, because PowerShell 5.1 strips the quotes).
+
 ## Brand positioning
 
 GrowDigitalNY is a **global, remote-first digital marketing and web development agency**. It is
@@ -484,13 +491,14 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
 `/affiliate-disclosure/` ✅ **live since 2026-11-16 (page 4276)**. Privacy and Terms were replaced the same day (the Terms page title is now "Terms of Use", URL unchanged).
 
 **Live pages:**
-- **Reviews:** `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,
+- **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16, fp_ref=d4ry58 pending Rahul's confirmation),
+  `/getresponse-review/` (page 4279, live 2026-11-16), `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,
   `/capcut-review-2026/`, `/appy-pie-ai-review-2026/` (note the `-ai-`), `/jasper-ai-review-pricing-2026/`
 - **Industry pages:** `/hotel-motel-marketing/`, `/car-dealership-marketing/`, `/restaurant-marketing/`,
   `/real-estate-marketing/`, `/life-insurance-marketing/`, `/event-management-marketing/`,
   `/salon-beauty-business-marketing/`, `/immigration-lawyer-marketing/`
 - **Other:** `/services/`, `/about-us/`, `/about/` (looks empty, a duplicate), `/customer-cabinet/`
-  (purpose unknown, check before touching), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
+  (purpose unknown, check before touching), `/blog/` (**draft 4282**, trimmed to live pages only, waiting for Rahul's yes), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
   and the default post `/hello-world/`
 
 **✅ UPDATE, later on 2026-11-16: Coming Soon is OFF and the site is public** (home, contact and a valid robots.txt all serve real content). The trust-signal problems below are now publicly visible, so fix them first. Hostinger status (via the hostinger MCP): CDN off, server cache off, LiteSpeed Cache plugin inactive, SSL active, WordPress 7.1.4, PHP 8.3, Yoast SEO and Site Kit active, 11 plugin updates pending (not applied), WordPress admin email set to a different Gmail address (Rahul to confirm).
