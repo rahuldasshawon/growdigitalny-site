@@ -242,6 +242,18 @@ you act**. The `/hostinger` command handles this.
   **rahul-das (ID 2)** with edit rights. The cloud session's proxy still gets 401, so **do WordPress work
   from Claude Code on Rahul's PC.** Keep the CDN off (or confirm with Hostinger that it passes
   `Authorization`) before switching it back on.
+- **✅ WordPress MCP (`growdigitalny-wordpress`) WORKS from Rahul's PC (2026-11-16, 00:46).** It has about
+  110 abilities: read, create and update pages and posts, Elementor, Yoast SEO, plugins, themes and
+  Hostinger settings. Rahul is an Administrator with `unfiltered_html`. Abilities that delete pages,
+  change plugins or toggle maintenance mode need a **separate explicit yes** each time.
+  - The Hostinger settings ability returns the maintenance-mode bypass code in plain text. **Never repeat
+    or log it.**
+  - Hostinger Tools: `enable_llms_txt` is **off** (so `/llms.txt` returns 404), and Force HTTPS is off
+    (the server still redirects HTTP to HTTPS with a 301). Two duplicate inactive plugins (Hostinger
+    Preview Domain, Smart Auto Updates) can be removed with Rahul's OK.
+  - **Rahul's PC copy is a ZIP download, not a git clone.** Edits Claude Code makes to `CLAUDE.md` or
+    `CHANGELOG.md` there don't reach GitHub. Keep the GitHub copy as the source of truth until git is
+    set up locally.
 - **Hostinger account MCP (`hostinger`, connected 2026-11-16 on Rahul's Windows PC).** Added with
   `claude mcp add --transport http hostinger https://mcp.hostinger.com` (local config, OAuth login in the
   browser, no token stored in the repo). It reaches Rahul's **whole Hostinger account**: websites, WordPress,
