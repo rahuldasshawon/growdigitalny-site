@@ -97,3 +97,16 @@
   - `/seo-writer` and `/web-builder`: added "WordPress output rules" and a required pre-publish check run
     (seo-writer is allowed to run the checker).
   - Current status: 0/23 pages ready to publish. The only blockers are [VERIFY] tags and content placeholders, with no structural problems.
+- HOSTINGER SETUP (2026-11-16):
+  - `CLAUDE.md`: new "Hosting: Hostinger" section. Detect the plan first; prefer SSH + WP-CLI (port usually 65002, [VERIFY]),
+    then the REST API, then hPanel steps. SSH keys only, run hosting work from Rahul's own computer, back up first, staging
+    if available, LiteSpeed Cache purge, and a list of actions that need Rahul's explicit OK. "How you access the site" now
+    shows the Hostinger SSH/WP-CLI command.
+  - Link table: Hostinger added as **Pending** (Rahul to join and paste the link; we host on it, so say that in reviews).
+    Phase 4 task added: /hostinger-review/ and /best-web-hosting/ (promo AND renewal prices, all [VERIFY]).
+  - New `/hostinger` command (`.claude/commands/hostinger.md`): `check` (read-only access test with SSH/REST diagnosis),
+    `backup` (wp db export outside public_html + REST JSON), `draft <file>` (prepublish check, slug-collision check,
+    strips the header comment, wraps the page in a Custom HTML block, creates a DRAFT, sets Yoast/Rank Math meta, never publishes)
+    and `health` (read-only status, SSL expiry, available updates listed but never applied). Every change needs Rahul's yes.
+  - `.env.example`: added SSH_PORT=65002 and Hostinger hints for SSH_HOST, SSH_USER and WP_PATH.
+  - `/ad-manager`: Hostinger added to pending offers (no paid ads yet), plus promo/renewal price and brand-bidding rules.

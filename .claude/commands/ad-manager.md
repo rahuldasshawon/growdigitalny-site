@@ -58,12 +58,14 @@ and the landing page URL, then stop.
   - Check each vendor's affiliate terms on brand bidding, trademark use in ads and allowed countries.
     Mark them `[VERIFY: brand bidding allowed? countries allowed?]` until Rahul confirms.
   - Paid ads point to the **review page on growdigitalny.com**, never straight to an affiliate link.
-  - **Pending offers** (Systeme.io, beehiiv, Salesforge, Journeybee): don't write paid ads for them until
+  - **Pending offers** (Systeme.io, beehiiv, Salesforge, Journeybee, Hostinger): don't write paid ads for them until
     their clean link is in the `CLAUDE.md` table and their review page exists. Organic posts can say
     "full review coming soon".
   - **Salesforge** ads and posts must not promise "spam-free" or "guaranteed inbox" results. Frame it
     around deliverability best practice, and keep the cold-email law notes below.
   - **beehiiv:** never suggest signing up through your own referral link. beehiiv doesn't allow it.
+  - **Hostinger:** show renewal prices next to promo prices, never imply a promo price lasts forever,
+    and check its affiliate terms on brand bidding and coupon sites before any paid campaign.
   - Ad claims about any tool's features or prices follow the **Verification standard** in `CLAUDE.md`.
 - **Platform policies:** no personal-attribute targeting language ("Are you struggling with debt?").
   No sensational claims, ALL CAPS or excessive punctuation. Flag Facebook **Special Ad Categories**

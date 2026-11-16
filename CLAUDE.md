@@ -203,12 +203,48 @@ banned phrases.
   someone confirms it on the vendor's official site. Removing the tag *is* the sign-off, so only do it
   after checking, and update the "Prices checked" date to the real date.
 
+## Hosting: Hostinger
+
+growdigitalny.com is hosted on **Hostinger**. Rahul isn't sure which plan he's on, so **detect before
+you act**. The `/hostinger` command handles this.
+
+- **Connection options, in order of preference:**
+  1. **SSH + WP-CLI.** Available on some Hostinger plans `[VERIFY: which plans]`. Turn it on in
+     *hPanel → Advanced → SSH Access*, which also shows the host, username and port. Hostinger's
+     shared-hosting SSH port is usually **65002**, not 22 `[VERIFY in hPanel]`. WP-CLI (`wp`) is
+     normally preinstalled. The WordPress path usually looks like
+     `/home/<user>/domains/growdigitalny.com/public_html` `[VERIFY]`.
+  2. **WordPress REST API** with an Application Password. Works on every plan.
+  3. **hPanel by hand.** For anything else (backups restore, staging, DNS, SSL, PHP version), give
+     Rahul exact click-by-click steps rather than guessing.
+- **Use SSH keys, not passwords.** Rahul adds his public key in *hPanel → SSH Access → SSH keys*.
+  Never ask for or store an SSH password or private key in the repo or chat.
+- **Run hosting work from Claude Code on Rahul's own computer**, where his SSH key and `.env` live.
+  Cloud sessions usually can't open SSH connections or reach the site.
+- **Backups:**
+  - Before any change, run `wp db export` to a timestamped file on the server, plus the REST JSON
+    backup from ground rule 1.
+  - Hostinger's automatic backups (*hPanel → Files → Backups*) are a safety net, not a substitute.
+    Their frequency depends on the plan `[VERIFY]`.
+- **Staging:** if the plan includes WordPress staging (*hPanel → WordPress → Staging*, `[VERIFY]`
+  plan), test risky changes such as plugin updates, theme changes and search-replace there first.
+- **Never, without Rahul's explicit OK for that specific action:**
+  - update, delete or deactivate plugins or themes
+  - run `wp search-replace` on the live database
+  - edit `wp-config.php` or `.htaccess`
+  - change DNS, SSL, PHP version or caching (LiteSpeed Cache)
+  - delete files or posts
+  - publish anything
+- **Caching:** Hostinger sites usually run **LiteSpeed Cache**. After creating or updating a page,
+  purge that page's cache (or ask Rahul to) before checking the live result.
+
 ## How you access the site
 
 - Use the **WordPress REST API** with the credentials in `.env`
   (`WP_URL`, `WP_USER`, `WP_APP_PASSWORD`). Use Basic Auth with the application password.
-- If `SSH_HOST` is set in `.env`, you may use **WP-CLI over SSH** instead. Prefer it for
-  Elementor content and SEO meta fields that the REST API can't write.
+- If `SSH_HOST` is set in `.env`, you may use **WP-CLI over SSH** (Hostinger: `ssh -p "$SSH_PORT"
+  "$SSH_USER@$SSH_HOST"`, then `wp --path="$WP_PATH" …`). Prefer it for Elementor content and SEO
+  meta fields that the REST API can't write. See **Hosting: Hostinger**.
 - Never print, log or commit the contents of `.env`.
 
 ## Ground rules (follow every time)
@@ -253,6 +289,7 @@ banned phrases.
 | Systeme.io | `[VERIFY: Rahul to join and paste clean link]` | **Pending.** All-in-one funnels, email, courses and website builder for solopreneurs and creators. Affiliate terms `[VERIFY]` |
 | beehiiv | `[VERIFY: Rahul to join and paste clean link]` | **Pending.** Newsletter platform for creators and media brands. Partner program reportedly tiered and time-limited `[VERIFY]`. Signing up through your own link is not allowed |
 | Salesforge | `[VERIFY: Rahul to join and paste clean link]` | **Pending.** AI cold-email outreach platform for B2B sales teams. Affiliate ("Forge Ambassador") terms `[VERIFY]`. Content must stress deliverability and anti-spam law (CAN-SPAM, GDPR/PECR, CASL) |
+| Hostinger | `[VERIFY: Rahul to join Hostinger's affiliate program and paste clean link]` | **Pending.** Web hosting, and the host growdigitalny.com runs on. Reviews must say we're a paying customer (honest, and it builds trust). Affiliate terms, including brand bidding and coupon rules, `[VERIFY]` |
 | Journeybee | `[VERIFY: does a public affiliate program exist?]` | **Pending.** Partner relationship management (PRM) for B2B SaaS partner programs. No affiliate program found. If there isn't one, cover it without an affiliate link |
 
 **Pending offers:** don't add an affiliate CTA until the clean link is in this table. Until then, write
@@ -306,6 +343,12 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
       price on the vendor's own site, or mark `[VERIFY]`. Until Rahul's clean links arrive, build
       them as non-affiliate reviews with `[AFFILIATE LINK: PENDING]` comments. Journeybee is likely
       to stay non-affiliate.
+- [ ] **Hostinger content** (drafts): `/hostinger-review/` (based on our real experience hosting
+      growdigitalny.com, with a true "how we evaluated" note) and `/best-web-hosting/` (a comparison
+      ranked by fit, not commission). Until Rahul's affiliate link is in the table, build them as
+      non-affiliate pages with `[AFFILIATE LINK: PENDING]` comments. Every price, renewal price and
+      plan limit is `[VERIFY]` (hosting promo prices usually differ a lot from renewal prices, so
+      always show both).
 
 ### Phase 5: Tracking (Rahul may need to do parts by hand)
 - [ ] Check whether GA4, Google Tag Manager, Microsoft Clarity and the Meta Pixel are installed. Report what's missing.
