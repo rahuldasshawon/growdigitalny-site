@@ -130,3 +130,4 @@
   - `legal/privacy-policy.html` and `legal/terms.html` are now marked as REPLACING the existing live pages (after backup); the
     terms slug is now `terms-conditions`.
 - SITE CHECK (2026-11-16): the whole site is in Hostinger 'Coming Soon' mode for visitors (home, pages, even robots.txt return the Coming Soon screen with HTTP 200; only llms.txt and the sitemap are real). Recorded in CLAUDE.md with LLM-optimization (llms.txt) guidance.
+- LOGIN DIAGNOSIS (2026-11-16): Application Passwords enabled and a new Application Password saved, but the Authorization header is stripped before WordPress (a fake-login probe also returns rest_not_logged_in). Site is behind Hostinger CDN (hcdn). Fix steps recorded in CLAUDE.md.

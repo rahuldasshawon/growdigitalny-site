@@ -376,6 +376,12 @@ search:
     Elementor MCP composer.
   - **Application Passwords are currently disabled** (the REST index advertises no auth methods).
     Rahul must turn off *Hostinger Tools → Disable application passwords* before REST or MCP logins work.
+  - **Update (later on 2026-11-16):** Application Passwords are now enabled, but **the server strips the
+    `Authorization` header before PHP sees it**. Even a deliberately fake login returns
+    `rest_not_logged_in` instead of `incorrect_password`. The site is behind Hostinger's CDN
+    (`Server: hcdn`). Fix: add the HTTP_AUTHORIZATION pass-through rule at the top of `public_html/.htaccess`
+    (back it up first), and/or temporarily disable Hostinger CDN to test. The alternative is the
+    Hostinger-hosted agent MCP below, which authenticates through Hostinger instead of the site.
   - `llms.txt` also lists a Hostinger-hosted agent MCP endpoint,
     `websites-agents.hostinger.com/growdigitalny.com/mcp` (auth method `[VERIFY]`).
 
