@@ -49,6 +49,11 @@
 19. Optional: install **Python** on your PC so the pre-publish checker runs locally. Use a **PO box** instead of
     your home address if you prefer. File a **NY assumed-name (DBA) certificate** until the LLC is registered.
 
+### New (2026-11-16)
+- Approve: remove the duplicate `/about/` (301 to `/about-us/`), one About and one Contact in the menu, a "Blog" menu item.
+- Approve publishing the drafts in batches (Claude Code verifies prices on vendor sites first).
+- Images: replace blurry or off-topic images; add official demo videos to reviews (lazy embed). Your own screenshots and walkthrough videos when possible.
+
 ## B. In the verification stage (`[VERIFY]` checks before publishing)
 
 Each `[VERIFY]` item must be confirmed on the vendor's **own** site (prices, free-plan limits, plan features),

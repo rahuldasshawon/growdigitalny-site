@@ -233,6 +233,39 @@ who's done the work and is being straight with them.
 - When reporting a change, include the mobile result (a screenshot description or measurements).
 - Baseline and open issues: `seo/mobile-audit-2026-11-16.md`.
 
+## Site structure, Blog hub, images and video (decided 2026-11-16)
+
+- **One page per purpose.** Keep `/about-us/` (it has the real content) and `/contact-us/`. Remove the near-empty
+  duplicate `/about/` (trash it after a backup) with a **301 redirect** `/about/` → `/about-us/`. The header
+  menu shows each page **once** (one About, one Contact; the "Get in Touch" button may also point to
+  `/contact-us/`). Delete or noindex `/hello-world/`. Check `/customer-cabinet/` before touching it.
+- **Blog hub `/blog/`** (`pages/blog.html`, block markup) links every comparison, every review (live and new)
+  and the latest Tech Briefs, grouped by topic. Add **"Blog"** to the main menu. Every new review or comparison
+  gets a card on `/blog/` when it's published.
+- **Publishing the drafts:** Claude Code on Rahul's PC (which can open vendor sites) verifies each `[VERIFY]` item
+  on the vendor's official site, records the "Prices checked" date, and removes `[SCREENSHOT]` boxes until Rahul
+  has real screenshots. If nobody tested the tool hands-on, the "How we evaluated" note says honestly: "Based
+  on <vendor>'s official documentation and pricing pages, checked on <date>." Pages are then created as
+  **drafts** for Rahul's approval, in this order:
+  1. GHL and GetResponse (ad landing pages)
+  2. comparisons
+  3. other reviews
+  4. service pages
+  5. `/tech-news/`
+  6. `/blog/` last
+- **Images:**
+  - Sharp and relevant only: tool screenshots (ideally Rahul's own), official press or brand images where the
+    vendor allows them, or quality stock that fits the topic.
+  - No off-topic stock (career photos on a writing-tool review, the Wix editor on other tools' pages).
+  - Upload WebP at about 1600 px wide max (about 1200 px for in-content), with descriptive alt text and
+    lazy-loading below the fold.
+  - No AI-generated "screenshots" of real products, and no fake people in testimonials.
+- **Video:**
+  - Each review can embed **one official vendor demo** from YouTube (embedding is allowed by YouTube), using a
+    lazy/click-to-load embed so mobile speed isn't hurt, with a short line saying it's the vendor's video.
+  - Later, Rahul's own short walkthroughs (screen recordings: Loom, OBS or CapCut) are best for trust and SEO.
+  - Add VideoObject schema only for videos actually on the page.
+
 ## WordPress publishing workflow
 
 Every page in `pages/`, `content/services/` and `legal/` is a single HTML file built to paste into
