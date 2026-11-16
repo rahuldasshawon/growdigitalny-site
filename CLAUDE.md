@@ -392,8 +392,8 @@ search:
 - Titles, H1s and SEO titles on all 6 reviews changed from 2026 to 2027 (URLs unchanged). The wrong
   "PopAI" titles on the Copy.ai and GearUP pages are fixed, and GearUP has a neutral meta description.
 - Still open:
-  - Rahul's Elementor "Update" clicks on the 7 pages, to refresh the stale `post_content` copy (also
-    fixes CapCut's star-emoji share image)
+  - ~~Rahul's Elementor "Update" clicks on the 7 pages~~ ✅ done 2026-11-16 ~01:25 New York time
+    (fresh modified times on all 7 pages; CapCut's share image is now a real image, not the star emoji)
   - the GearUP body rewrite (most urgent)
   - the homepage Client Results and testimonials (decision pending)
   - chained Jasper referral links
