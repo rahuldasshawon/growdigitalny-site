@@ -343,7 +343,9 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
   (purpose unknown, check before touching), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
   and the default post `/hello-world/`
 
-**🚨 SITE IS IN "COMING SOON" MODE (checked 2026-11-16).** Every URL served to logged-out visitors
+**✅ UPDATE, later on 2026-11-16: Coming Soon is OFF and the site is public** (home, contact and a valid robots.txt all serve real content). The trust-signal problems below are now publicly visible, so fix them first. Hostinger status (via the hostinger MCP): CDN off, server cache off, LiteSpeed Cache plugin inactive, SSL active, WordPress 7.1.4, PHP 8.3, Yoast SEO and Site Kit active, 11 plugin updates pending (not applied), WordPress admin email set to a different Gmail address (Rahul to confirm).
+
+**Earlier note (resolved): 🚨 SITE WAS IN "COMING SOON" MODE.** Every URL served to logged-out visitors
 (home, reviews, contact, even `/robots.txt`) returns Hostinger's "Coming Soon" screen with HTTP 200.
 Only `/llms.txt` and the sitemap still serve real content. Until Rahul turns it off (*WordPress →
 Hostinger → Coming Soon / maintenance toggle* `[VERIFY: exact location]`):
