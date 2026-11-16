@@ -331,6 +331,28 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
   (purpose unknown, check before touching), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
   and the default post `/hello-world/`
 
+**🚨 SITE IS IN "COMING SOON" MODE (checked 2026-11-16).** Every URL served to logged-out visitors
+(home, reviews, contact, even `/robots.txt`) returns Hostinger's "Coming Soon" screen with HTTP 200.
+Only `/llms.txt` and the sitemap still serve real content. Until Rahul turns it off (*WordPress →
+Hostinger → Coming Soon / maintenance toggle* `[VERIFY: exact location]`):
+- Google and AI engines see an empty "Coming Soon" site.
+- `robots.txt` is invalid (it returns HTML).
+- Google and Microsoft Ads will reject ads for an under-construction destination.
+
+Fix the trust-signal problems below **before** switching it off, or at the same time.
+
+**LLM optimization (Hostinger Tools):** the plugin generates `/llms.txt`, a page list for AI tools.
+Keep it on, but it lists every published page, so unpublish or fix weak pages and keep drafts out.
+It's a proposed standard: helpful and cheap, but not a ranking guarantee. What matters more for AI
+search:
+- a publicly reachable site
+- a valid `robots.txt` that allows the AI crawlers Rahul wants (e.g. GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended)
+- pages that answer questions directly
+- FAQ schema that matches the visible text
+- a real About page with the founder's actual experience
+- consistent brand details across the web
+
 **Problems found on live pages (fix with backups and Rahul's OK):**
 - **Fake or unverifiable trust signals:**
   - Home: "New York's #1 Digital Agency". An unverifiable superlative is an ad-policy risk, and it

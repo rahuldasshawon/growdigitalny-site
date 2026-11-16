@@ -129,3 +129,4 @@
   - All drafts now link to the real URLs: `/contact/` -> `/contact-us/`, `/terms/` -> `/terms-conditions/` (13 files).
   - `legal/privacy-policy.html` and `legal/terms.html` are now marked as REPLACING the existing live pages (after backup); the
     terms slug is now `terms-conditions`.
+- SITE CHECK (2026-11-16): the whole site is in Hostinger 'Coming Soon' mode for visitors (home, pages, even robots.txt return the Coming Soon screen with HTTP 200; only llms.txt and the sitemap are real). Recorded in CLAUDE.md with LLM-optimization (llms.txt) guidance.
