@@ -382,6 +382,13 @@ search:
     (`Server: hcdn`). Fix: add the HTTP_AUTHORIZATION pass-through rule at the top of `public_html/.htaccess`
     (back it up first), and/or temporarily disable Hostinger CDN to test. The alternative is the
     Hostinger-hosted agent MCP below, which authenticates through Hostinger instead of the site.
+  - **Resolved on the site side (2026-11-16):** Rahul created a real Application Password named
+    "Claude Code" (the earlier saved login was his normal password) and added the HTTP_AUTHORIZATION
+    rule to `.htaccess`. A `curl -u` from **his own computer returns his user**, so the site, username
+    and Application Password work. CDN on/off made no difference.
+  - **From the cloud session it still returns `rest_not_logged_in`:** the proxy-saved credential isn't
+    being applied yet (possibly a pickup delay after the environment switch). **Reliable path:** Claude
+    Code on Rahul's computer with `.env` + `.mcp.json`.
   - `llms.txt` also lists a Hostinger-hosted agent MCP endpoint,
     `websites-agents.hostinger.com/growdigitalny.com/mcp` (auth method `[VERIFY]`).
 
