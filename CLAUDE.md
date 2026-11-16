@@ -390,9 +390,9 @@ you act**. The `/hostinger` command handles this.
   - Hostinger Tools: `enable_llms_txt` is **off** (so `/llms.txt` returns 404), and Force HTTPS is off
     (the server still redirects HTTP to HTTPS with a 301). Two duplicate inactive plugins (Hostinger
     Preview Domain, Smart Auto Updates) can be removed with Rahul's OK.
-  - **Rahul's PC copy is a ZIP download, not a git clone.** Edits Claude Code makes to `CLAUDE.md` or
-    `CHANGELOG.md` there don't reach GitHub. Keep the GitHub copy as the source of truth until git is
-    set up locally.
+  - **Rahul's PC folder is a git clone of GitHub (since 2026-11-16).** Git for Windows is installed. On the PC:
+    `git pull` to update; push PC work to a new branch (never straight to `main`) and merge it with a pull request.
+    GitHub `main` stays the source of truth. `.env`, `backups/` and `logs/` are git-ignored.
 - **Hostinger account MCP (`hostinger`, connected 2026-11-16 on Rahul's Windows PC).** Added with
   `claude mcp add --transport http hostinger https://mcp.hostinger.com` (local config, OAuth login in the
   browser, no token stored in the repo). It reaches Rahul's **whole Hostinger account**: websites, WordPress,
@@ -492,13 +492,16 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
 
 **Live pages:**
 - **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16, fp_ref=d4ry58 pending Rahul's confirmation),
-  `/getresponse-review/` (page 4279, live 2026-11-16), `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,
+  `/getresponse-review/` (page 4279, live 2026-11-16),
+- **Comparisons (live 2026-11-16):** `/best-ai-writing-tools/` (4285), `/best-email-marketing-tools/` (4286),
+  `/best-newsletter-platforms/` (4287), `/best-ai-sdr-tools/` (4288)
+- **Older reviews:** `/copy-ai-review-2026/`, `/gearup-booster-review-2026/`, `/popai-review-2026/`,
   `/capcut-review-2026/`, `/appy-pie-ai-review-2026/` (note the `-ai-`), `/jasper-ai-review-pricing-2026/`
 - **Industry pages:** `/hotel-motel-marketing/`, `/car-dealership-marketing/`, `/restaurant-marketing/`,
   `/real-estate-marketing/`, `/life-insurance-marketing/`, `/event-management-marketing/`,
   `/salon-beauty-business-marketing/`, `/immigration-lawyer-marketing/`
 - **Other:** `/services/`, `/about-us/`, `/about/` (looks empty, a duplicate), `/customer-cabinet/`
-  (purpose unknown, check before touching), `/blog/` (**draft 4282**, trimmed to live pages only, waiting for Rahul's yes), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
+  (purpose unknown, check before touching), `/blog/` (page 4282, **live 2026-11-16**, cards for live pages only; add a card when each new page goes live), `/contact-us/`, `/privacy-policy/`, `/terms-conditions/`,
   and the default post `/hello-world/`
 
 **✅ UPDATE, later on 2026-11-16: Coming Soon is OFF and the site is public** (home, contact and a valid robots.txt all serve real content). The trust-signal problems below are now publicly visible, so fix them first. Hostinger status (via the hostinger MCP): CDN off, server cache off, LiteSpeed Cache plugin inactive, SSL active, WordPress 7.1.4, PHP 8.3, Yoast SEO and Site Kit active, 11 plugin updates pending (not applied), WordPress admin email set to a different Gmail address (Rahul to confirm).

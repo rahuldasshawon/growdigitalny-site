@@ -26,7 +26,7 @@ Read this first, then `CLAUDE.md` (the full rules), then `STATUS.md` (open items
   source of truth for `CLAUDE.md`, the drafts (`pages/`, `content/services/`, `legal/`), `assets/gdny-master.css`,
   `tools/prepublish_check.py`, `seo/`, `wp-mu-plugins/`, and the commands in `.claude/commands/`.
 - **Rahul's Windows 10 PC:** Claude Code 2.1.325 and Node.js are installed, and the project is at
-  `C:\Users\rahul\growdigitalny-site-main` (a **ZIP copy, not a git clone**, so local edits don't reach GitHub).
+  `C:\Users\rahul\growdigitalny-site-main` (a **git clone of GitHub** since 2026-11-16: `git pull` to update, push PC work to a new branch and merge by pull request).
   `.env` holds `WP_USER`/`WP_APP_PASSWORD` (Rahul's admin Application Password) and
   `WP_BRIEF_USER`/`WP_BRIEF_APP_PASSWORD` (the Contributor bot `tech-brief-bot`). **Never print `.env`.**
   - Start Claude Code with `.env` loaded:
