@@ -4,6 +4,8 @@ You are working on **growdigitalny.com**, a WordPress + Elementor site owned by 
 Goal: get the site ready to run paid ads (Microsoft Ads first, then Google Ads) for
 affiliate offers. Work through the task list below in order.
 
+> **New Claude session? Read `PROJECT_MEMORY.md` first (a one-page summary), then `STATUS.md` for open items.**
+
 ## Brand positioning
 
 GrowDigitalNY is a **global, remote-first digital marketing and web development agency**. It is
