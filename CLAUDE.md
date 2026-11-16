@@ -236,6 +236,12 @@ you act**. The `/hostinger` command handles this.
     fine without asking. Check what the abilities do (`/mcp`) before using a new one.
   - Run `/mcp` in Claude Code to confirm the server is connected. Cloud sessions usually can't reach
     the site, so use it from Rahul's own computer.
+- **✅ WordPress REST login WORKS from Rahul's PC (2026-11-16, ~00:30).** After Hostinger's assistant
+  rewrote the `.htaccess` pass-through (`RewriteRule … E=HTTP_AUTHORIZATION` plus a separate
+  `SetEnvIfNoCase Authorization "^(.*)$" HTTP_AUTHORIZATION=$1`), `curl.exe -u` returned user
+  **rahul-das (ID 2)** with edit rights. The cloud session's proxy still gets 401, so **do WordPress work
+  from Claude Code on Rahul's PC.** Keep the CDN off (or confirm with Hostinger that it passes
+  `Authorization`) before switching it back on.
 - **Hostinger account MCP (`hostinger`, connected 2026-11-16 on Rahul's Windows PC).** Added with
   `claude mcp add --transport http hostinger https://mcp.hostinger.com` (local config, OAuth login in the
   browser, no token stored in the repo). It reaches Rahul's **whole Hostinger account**: websites, WordPress,
