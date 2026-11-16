@@ -160,8 +160,257 @@
   - Still open: GHL referral code; `/about/` 301 line in `.htaccess` then trash `/about/`; `/customer-cabinet/` decision; Blog publish + "Blog" menu item after Rahul's yes.
 - LINK CHECK (2026-11-16, cloud, read-only): 25 pages published, 4 page drafts (blog 4282, tech-news 4272, 2 old Elementor copies) + brief post 4273; 18 repo pages not on WordPress yet. 70 unique links: all internal links OK, jump links OK; 20 dead `#` header/footer links on every page; Privacy/Terms/Affiliate Disclosure not linked in the footer; 19 outbound links untestable from the cloud (network policy). Rule added: always give Rahul a Claude Code prompt for his PC.
 - PC WORK SYNCED TO GITHUB (2026-11-16, ~12:15 UTC, cloud session, read-only from WordPress):
-  - Done on Rahul's PC and verified live from the cloud: `/blog/` published (page 4282, 11:32 UTC) with "Blog" in the main menu; footer rebuilt (Option A): 0 dead `#` links, links to About, Services, Blog, Contact, Privacy Policy, Terms & Conditions and Affiliate Disclosure; theme skip link disabled (Rahul approved "yes A + skip link"). Footer/header backup on Rahul's PC: `backups\header-footer-templates-20261116-065235.json`. Social icons left for later (Rahul's choice).
+  - Done on Rahul's PC and verified live from the cloud: `/blog/` published (page 4282, 11:32 UTC) with "Blog" in the main menu; footer rebuilt (Option A): 0 dead `#` links, links to About, Services, Blog, Contact, Privacy Policy, Terms & Conditions and Affiliate Disclosure; skip link NOT fixed: the Hello theme switch was tried and reverted because the broken link comes from the Header Footer Elementor plugin (a.hfe-skip-link); see the PC session log below. Footer/header backup on Rahul's PC: `backups\header-footer-templates-20261116-065235.json`. Social icons left for later (Rahul's choice).
   - Batch 2 drafts created on the PC: `/best-ai-writing-tools/` (4285), `/best-email-marketing-tools/` (4286), `/best-newsletter-platforms/` (4287), `/best-ai-sdr-tools/` (4288). 0 [VERIFY], all pass the pre-publish check. Email and newsletter comparisons link to each other, so publish them together.
   - `pages/blog.html` and the 4 comparison files now mirror WordPress (the full original blog layout is in commit 318542f).
 - GITIGNORE (2026-11-16, cloud): added logs/, .claude/settings.local.json, *.log, *.zip and scratchpad/ so the PC's local logs, settings and safety zips can never be committed when the PC folder is linked to GitHub.
 - SMOKE TEST (2026-11-16): seo/smoke-test-2026-11-16.md: 31 URLs all 200, phone layout OK (home hero fixed), 1 H1 everywhere, 0 broken internal links, affiliate compliance OK, legal footer links everywhere. To fix: speed (home LCP 8.0 s), public elementor-hf template pages, duplicate /about/, 2 dead # links on 2 pages, GTranslate settings, 15 pages still unpublished.
+
+## PC session log (Rahul's PC, 2026-11-15/16)
+
+Entries written on Rahul's PC that weren't in this file yet, copied word for word when the PC folder was linked to GitHub (branch pc-sync-20261116, 2026-11-16).
+
+### 2026-11-16 (scheduled Tech Brief run)
+- DAILY TECH BRIEF (scheduled morning run): "Daily Tech Brief: Bessent Pushes Nvidia for an Outside CEO (November 16, 2026)",
+  slug `daily-tech-brief-2026-11-16`. 3 stories passed verification.
+  - Files: `content/briefs/2026-11-16-tech-brief.md`, `content/briefs/2026-11-16-tech-brief.html`,
+    `content/briefs/2026-11-16-newsletter.txt`
+  - **WordPress draft: NOT created.** The `growdigitalny-wordpress` MCP server reported "Connection Failed" for this run,
+    so no post was made and nothing on the site was touched. Draft ID: none. Paste the .html into a new post by hand
+    (category Tech Brief, status draft) or let the next run retry.
+  - Sources opened: CNBC (Bessent/Nvidia, 2026-11-15), TechCrunch (Nvidia security team, 2026-11-14; Apple health AI app,
+    2026-11-15), Apple Newsroom (Apple Health AI Usage Study, 2026-11-15), Amazon Leo mission updates page (Vulcan LV-01 anomaly, 2026-11-15).
+  - Dropped: ChatGPT Wallet (announced 2026-11-13, outside the 24-hour window); Bloomberg's "first total mission loss" line for ULA
+    (article not opened, so not used); The Verge, Ars Technica and Wired feeds couldn't be fetched.
+  - Notes for Rahul: there's no subscribe link yet (the CTA is plain text). The newsletter .txt doesn't include an unsubscribe link or postal
+    address, so your email tool needs to add them (CAN-SPAM). Apple eligibility is written as "Apple Intelligence-capable iPhone" because
+    Apple says iPhone 15 Pro or later and TechCrunch says iPhone 15 or later.
+
+### 2026-11-15 (local session, Hostinger MCP)
+- HOSTINGER STATUS (read-only): WordPress 7.1.4, PHP 8.3.36, maintenance mode off, CDN off, server cache off,
+  LiteSpeed Cache installed but inactive, SSL active (lifetime, HTTPS redirect on). 12 active plugins, 11 with updates
+  available (none applied). Logged-out homepage now serves the real site (no Coming Soon screen).
+- FAKE TRUST SIGNAL SCAN (read-only, public REST API + rendered homepage; the Hostinger MCP can't read page content):
+  - Home: hero label "✦ New York's #1 Digital Agency"; stats row (Clients Served 200+, Avg. ROI 8x, Retention Rate 99%,
+    In Business 5 Yr, all animated from 0 and unverified; Avg. ROI and Retention Rate appear twice).
+  - "⭐⭐⭐⭐⭐ Trusted by thousands…" hero line on Jasper, Copy.ai, Appy Pie, PopAI and GearUP reviews; "Trusted by millions…" on CapCut.
+- APPROVED BY RAHUL (ground rule 4 + global positioning), done by Rahul by hand in Elementor (method a), one page at a time:
+  - Home: hero label -> "✦ Remote-first web, SEO & lead generation agency"; remove the whole stats row; rewrite the
+    "based in New York" / "New York energy" / "under one roof in New York" lines for global positioning.
+  - 6 review pages: delete the stars + "Trusted by…" line.
+- Backups: Rahul made a Hostinger backup. Also saved the public rendered content locally:
+  `backups/all-pages-rendered-20261115-2349.json` and `backups/home-rendered-20261115-2349.html`
+  (rendered snapshot only, not the REST `context=edit` backup, which needs the Application Password).
+- Flagged, NOT changed (needs Rahul's decision): homepage testimonials and "Client Results" cards mention New York clients
+  (Brooklyn bakery, NYC fitness studio, law firm, tech startup). If they aren't real, named-with-permission clients, they break ground rule 4.
+- Progress (update as each page is confirmed done):
+  - [x] Home (done via WordPress MCP on 2026-11-16, see below)
+  - [x] /jasper-ai-review-pricing-2026/ (2026-11-16, MCP)
+  - [x] /copy-ai-review-2026/ (2026-11-16, MCP)
+  - [x] /appy-pie-ai-review-2026/ (2026-11-16, MCP)
+  - [x] /popai-review-2026/ (2026-11-16, MCP)
+  - [x] /gearup-booster-review-2026/ (2026-11-16, MCP)
+  - [x] /capcut-review-2026/ (2026-11-16, MCP)
+
+### 2026-11-16 (local session, WordPress MCP `growdigitalny-wordpress`)
+- ACCESS CHECK (read-only): MCP working (Hostinger AI abilities), REST working (user is Administrator with unfiltered_html),
+  SSH not set up (SSH_HOST/SSH_USER/WP_PATH empty). Hostinger Tools: llms.txt generation is OFF (/llms.txt returns 404), Force HTTPS off
+  (server still 301s http to https). Theme Hello Elementor 3.4.7; Yoast SEO active; LiteSpeed Cache inactive; no security plugin.
+- METHOD CHANGE: the trust-signal fixes approved on 2026-11-15 are now done through the WordPress MCP instead of by hand,
+  one page at a time with Rahul's yes for each.
+- BACKUPS (REST `context=edit` incl. meta and `_elementor_data`), taken before any change:
+  `backups/home-20261116-004817.json`, `backups/jasper-ai-review-pricing-2026-20261116-004817.json`,
+  `backups/copy-ai-review-2026-20261116-004817.json`, `backups/appy-pie-ai-review-2026-20261116-004817.json`,
+  `backups/popai-review-2026-20261116-004817.json`, `backups/gearup-booster-review-2026-20261116-004817.json`,
+  `backups/capcut-review-2026-20261116-004817.json`
+- HOME (page 6, stays published), approved by Rahul:
+  - Hero label (heading 40445b70): "✦ New York's #1 Digital Agency" -> "✦ Remote-first web, SEO & lead generation agency".
+  - Hero text (2099af59), heading aec7b6e ("New York energy." -> "Remote-first. Wherever you are."), text 54bca8c,
+    services intro 57468913, "Why" heading 6a164732 ("New York energy." -> "Remote-first.", green "Real results." kept): rewritten for global positioning.
+  - Deleted the visible hero counter row (container 70ebd12: Clients Served 200+, Avg. ROI 8x, Retention 99%) and the
+    already-hidden counter section 61a3e42 (Avg. ROI, Retention, In Business 5 Yr). 0 counter widgets left.
+  - Yoast meta description + OG description set (158 chars): "Remote-first web design, SEO and lead generation agency for startups,
+    SaaS companies and online businesses worldwide. Sites and campaigns that bring in leads." Before, there was none, and Yoast
+    auto-built og:description from stale post_content ("New York's #1… Clients Served 0…").
+  - Verified: live HTML no longer contains "#1 Digital Agency", "based in New York" or "Clients Served".
+  - NOT changed (per Rahul): Client Results / testimonials section (still mentions New York, Brooklyn bakery, NYC fitness studio).
+  - KNOWN GAP: MCP Elementor edits update `_elementor_data` but not the `post_content` fallback copy. Rahul to open Home in
+    Elementor and click Update (no changes) to regenerate it. Same applies to each review page after its edit.
+- JASPER (page 4056, /jasper-ai-review-pricing-2026/, stays published), approved by Rahul:
+  - Hero text (text-editor 3238585): deleted the paragraph "⭐⭐⭐⭐⭐ Trusted by thousands of marketers worldwide"; first sentence unchanged.
+  - Yoast meta + OG description set (146 chars; before: none, og auto-built from stale post_content incl. the stars line):
+    "Our Jasper AI review: what it's good at for blog posts, marketing copy and emails, who it suits, who should skip it, and what to check on pricing."
+  - Verified live: 0 "Trusted by", 0 ⭐. Title/H1 (2026 wording) untouched, left for Phase 3.
+- COPY.AI (page 4203, /copy-ai-review-2026/, stays published), approved by Rahul:
+  - Hero text (text-editor 3238585): deleted the paragraph "⭐⭐⭐⭐⭐ Trusted by thousands of people worldwide" (stars stored as 5 emoji <img> tags);
+    first two paragraphs unchanged.
+  - Yoast meta + OG description replaced (147 chars; before: a PopAI description):
+    "Our Copy.ai review: what it does for blog posts, sales emails and social copy, who it suits, who should skip it, and the alternatives worth a look."
+  - NOT changed (Rahul declined for now): Yoast SEO title still "PopAI Review 2026 | AI Presentation Maker, PDF Chat"; og:title/H1 left for Phase 3.
+  - Verified live: 0 "Trusted by", 0 stars.
+- APPY PIE (page 4123, /appy-pie-ai-review-2026/, stays published), approved by Rahul:
+  - Hero text (text-editor 3238585): deleted the paragraph "⭐⭐⭐⭐⭐ Trusted by thousands of people worldwide"; first paragraph unchanged.
+  - SEO meta untouched (already a correct Appy Pie description). Phase 3 note: it says "start your free trial today" (unverified trial claim).
+  - Verified live: 0 "Trusted by", 0 stars.
+- 2027 TITLE UPDATE (6 review pages, via WordPress MCP), approved by Rahul in one yes. Slugs keep -2026; all stay published.
+  - Fresh backups first: `backups/<slug>-20261116-010740.json` for jasper-ai-review-pricing-2026, copy-ai-review-2026,
+    appy-pie-ai-review-2026, popai-review-2026, gearup-booster-review-2026, capcut-review-2026.
+  - WP page titles (pages-update, title only; content and _elementor_data verified identical to backups afterwards):
+    Jasper AI Review & Pricing (2027) | Copy AI Review 2027 | Appy Pie AI Review 2027 | PopAI Review 2027 |
+    GearUp Booster Review 2027 | CapCut Review 2027.
+  - H1 heading widget 512785b on each page: 2026 -> 2027 (existing 48px style spans kept). No other "2026" in page content;
+    no factual "Updated"/"prices checked" dates exist on these pages.
+  - Yoast SEO titles (og:title follows them):
+    - Copy.ai: "PopAI Review 2026 | AI Presentation Maker, PDF Chat" -> "Copy.ai Review 2027: Features, Pros & Cons - GrowDigitalNY"
+    - GearUP: "PopAI Review 2026 | AI Presentation Maker, PDF Chat" -> "GearUP Booster Review 2027 - GrowDigitalNY"
+    - Appy Pie: "...Review 2026 | Build Apps, Websites & Automate" -> "...Review 2027 | ..."
+    - PopAI: "PopAI Review 2026 | AI Presentation Maker, PDF Chat" -> "PopAI Review 2027 | ..."
+    - Jasper and CapCut: no stored SEO title; Yoast template follows the WP title automatically.
+  - Verified live: status publish, 1 H1 each showing 2027, <title> and og:title show 2027, no 2026 left in those.
+  - Still open: GearUP meta description still describes PopAI; brand spellings differ between WP title and H1
+    (Copy AI/Copy.ai, PopAI/Pop AI, GearUp/GearUP). Trust-signal fixes for PopAI, GearUP and CapCut still pending approval.
+  - Elementor "Update" click needed (post_content fallback is stale after MCP widget edits) on: Home, Jasper, Copy.ai, Appy Pie,
+    PopAI, GearUP, CapCut.
+- TRUST-SIGNAL FIXES, LAST 3 PAGES (via WordPress MCP), approved by Rahul in one yes. All stay published.
+  - Fresh backups first: `backups/popai-review-2026-20261116-011113.json`, `backups/gearup-booster-review-2026-20261116-011113.json`,
+    `backups/capcut-review-2026-20261116-011113.json`.
+  - POPAI (4160): hero text 3238585, deleted "⭐⭐⭐⭐⭐ Trusted by thousands of people worldwide"; first two paragraphs unchanged.
+  - GEARUP (4185): hero text 3238585, deleted "⭐⭐⭐⭐⭐ Trusted by thousands of people worldwide"; first two paragraphs unchanged.
+    Yoast meta + OG description replaced (150 chars; before: a PopAI description):
+    "Our GearUP Booster review: what this game network booster does about ping and lag, who it suits, who should skip it, and the alternatives to consider."
+    KNOWN MISMATCH until the Phase 3 rewrite: the page body still describes GearUP as a career/resume tool.
+  - CAPCUT (4143): hero text 3238585, deleted "⭐⭐⭐⭐⭐ Trusted by millions of people worldwide"; first paragraph unchanged.
+  - Verified live: 0 "Trusted by" and 0 visible stars on all 3; kept paragraphs intact; GearUP head meta has no "PopAI".
+  - FOUND, NOT CHANGED: CapCut og:image + schema thumbnail is the star emoji SVG (s.w.org/.../2b50.svg). Yoast takes the first
+    image in the stale post_content. Expected to clear after the Elementor "Update" click; otherwise set an explicit og:image.
+    GearUP og:image is g1.jpg, the same image as Copy.ai (likely left over from cloning); review in Phase 3.
+  - All approved trust-signal fixes (Home + 6 reviews) are now done. Elementor "Update" click still needed on all 7 pages.
+- YOAST SEO PLAN (source: `seo/yoast-plan-2026-11.md` in the GitHub repo), applied via one MCP seo-bulk-update, approved by Rahul.
+  Only Yoast fields changed (focus keyphrase, SEO title, meta description; plus og:description on Home, Jasper, Copy.ai at Rahul's request).
+  No page content changed. All 20 pages stay published.
+  - Backups first: `backups/<slug>-20261116-013253.json` for all 20 pages (home, services, 8 industry pages, 6 reviews, about-us,
+    contact-us, privacy-policy, terms-conditions).
+  - Before: no page had a focus keyphrase; most had no stored SEO title or description (Yoast auto-titles like "HOTEL & MOTEL MARKETING - GrowDigitalNY").
+  - Focus keyphrases (one per page, no duplicates, no locations): digital marketing agency (home), digital marketing services, hotel marketing,
+    car dealership marketing, restaurant marketing, real estate marketing, life insurance marketing, event management marketing, salon marketing,
+    immigration lawyer marketing, Jasper AI review, Copy.ai review, Appy Pie review, PopAI review, GearUP Booster review, CapCut review,
+    about Grow Digital NY, contact Grow Digital NY, privacy policy, terms and conditions.
+  - SEO titles: as in the plan, brand "| Grow Digital NY", all <=60 chars. Rahul's overrides (so titles don't promise missing sections):
+    Copy.ai "Copy.ai Review 2027: Features & Use Cases | Grow Digital NY"; Contact "Contact Grow Digital NY | Web Design, SEO & Google Ads";
+    About "About Grow Digital NY | Our Founder & Approach". Jasper keeps "Pricing" (pricing section coming in the rewrite).
+  - Meta descriptions (all <=155 chars): as planned for home, hotel, car, restaurant, real estate, life insurance, salon, privacy, terms.
+    Adjusted to match actual page content: services (no "what's included"/"how we work"), event ("inquiries", US spelling),
+    immigration (dropped "No outcome promises."), Jasper/Copy.ai (dropped "who should skip it"/alternatives, which the pages lack),
+    Appy Pie/CapCut (no downsides/pricing/free-vs-paid sections; no trial claims), PopAI (no pricing/pros section), about-us, contact-us.
+    GearUP description unchanged (body still describes a career tool; Phase 3 rewrite).
+  - Verified live on all 20: <title>, meta description, og:title and og:description match exactly; HTTP 200; no noindex.
+  - NOT applied (awaiting Rahul's OK): noindex for /about/ (1490), /hello-world/ (post 1), /customer-cabinet/ (292, check purpose first).
+  - Open content gaps (need content edits): home keyphrase not in H1/intro; salon and immigration pages have no H1; Jasper title
+    promises pricing; About page doesn't mention remote-first.
+- TECH NEWS HUB + TECH BRIEF COMMAND, approved by Rahul:
+  - Saved `.claude/commands/tech-brief.md` from the GitHub repo (read first: drafts the weekly brief, never publishes, asks before WP writes).
+  - Created post category "Tech Brief" (slug tech-brief) -> ID 12 (WordPress MCP categories-create).
+  - Created DRAFT page 4272 "Tech & AI News Today" (slug tech-news) from `pages/tech-news.html` (GitHub), block content from the
+    wp:group line to the end, TECH_BRIEF_CATEGORY_ID -> 12. Default block editor (no Elementor data/edit mode);
+    `_elementor_page_settings.hide_title = yes` so Hello Elementor hides the theme title (one H1). Stored content verified
+    identical to the file (6,443 chars). Not public (logged-out /tech-news/ -> 404).
+  - Yoast: title "Tech & AI News Today + Weekly Brief | Grow Digital NY", description from the file header (139 chars), focus keyphrase "tech news".
+  - Server-side render check: all 4 RSS blocks show 6 headlines each, no RSS errors (TechCrunch, The Verge, Wired AI, Ars Technica).
+    Tech Brief latest-posts list is empty until the first brief is published.
+  - Before publishing: 6 internal links 404 (/best-ai-writing-tools/, /best-email-marketing-tools/, /best-newsletter-platforms/,
+    /best-ai-sdr-tools/, /gohighlevel-review/, /systeme-io-review/); [FORM: ...] newsletter placeholder; confirm one H1 in Preview.
+    tools/prepublish_check.py could not run (Python not installed on this computer).
+  - Edit link: https://growdigitalny.com/wp-admin/post.php?post=4272&action=edit
+- FEED REFRESH (approved): saved `wp-mu-plugins/gdny-feed-cache-30min.php` (wp_feed_cache_transient_lifetime -> 1800s).
+  NOT yet on the server: Rahul uploads it to public_html/wp-content/mu-plugins/ via hPanel File Manager. Undo: delete that file.
+- TECH BRIEF AUTOMATION (approved):
+  - Re-downloaded `.claude/commands/tech-brief.md` (now with daily mode + strict verification + scheduled draft-only rule).
+  - Added `automation/run-tech-brief.ps1` (loads .env into the process only, uses the Contributor login, runs
+    `claude -p "/tech-brief daily"` with --restricted, --tools Read/Glob/Grep/Write/Edit/WebFetch/WebSearch, --strict-mcp-config
+    (WordPress MCP only), dontAsk + no prompts; logs to logs/tech-brief-<stamp>.jsonl/.err.txt),
+    `automation/tech-brief-settings.json` (writes only content/briefs/** and CHANGELOG.md; denies .env, backups, .claude, automation, .mcp.json;
+    PreToolUse guard on all MCP calls), `automation/brief-guard.ps1` (allows read-only abilities + posts-create with status draft,
+    categories [12] and Yoast meta only; blocks everything else). Guard tested locally: 13/13 cases correct.
+  - Registered Windows task "GDNY Tech Brief (daily 7am)": daily 07:00, run as rahul (only when logged on), wake to run,
+    start when available, network required, 1 h limit, no parallel runs.
+    Undo: Unregister-ScheduledTask -TaskName 'GDNY Tech Brief (daily 7am)' -Confirm:$false; delete automation\; revoke the app password.
+  - BLOCKED: test run not done. WP_BRIEF_USER / WP_BRIEF_APP_PASSWORD (Contributor "tech-brief-bot") not yet in .env.
+    Until then the 07:00 run exits safely with a note in logs\ and creates nothing.
+- GTRANSLATE (approved by Rahul): backup of plugin list first: `backups/plugins-20261116-023856.json` (17 plugins, 12 active).
+  Installed + activated "Translate WordPress with GTranslate" 5.0.2 from wordpress.org (slug gtranslate, plugin_file gtranslate/gtranslate.php;
+  tested up to WP 7.1.4) via WordPress MCP. Now 18 plugins, 13 active. Homepage shows no GTranslate output until settings are saved.
+  Settings can't be changed via MCP (GTranslate stores its own option); Rahul configures by hand: floating menu bottom-right (desktop + mobile),
+  default English, + es, hi, bn, ta, te, ur, ar, it, fr, pt, de, zh-CN, native language names.
+  To do: privacy-policy paragraph about Google Translate (legal review), "automatic translation" note in Terms, check an RTL page (Arabic).
+  Undo: deactivate the plugin (delete only with Rahul's OK).
+- TECH BRIEF FIX (approved by Rahul): Claude's scheduled run no longer has any WordPress access.
+  - `automation/run-tech-brief.ps1`: Claude runs with --restricted, file/web tools only, --strict-mcp-config with no MCP servers, and WP credentials removed from its environment. Logs are now UTF-8. After a clean run it calls the posting script; output goes to `logs/post-brief-<stamp>.txt`.
+  - New `automation/post-brief-draft.ps1`: posts content/briefs/<date>-tech-brief.{md,html} via REST with the Contributor login (tech-brief-bot). status=draft and category 12 are hard-coded. Sets the Yoast title, description and focus keyphrase. Refuses duplicate slugs, unexpected slugs, and <script>/<iframe>.
+  - `automation/tech-brief-settings.json`: removed the MCP tool allows and the PreToolUse hook (brief-guard.ps1 is no longer used; the file is kept).
+  - Test: posted today's brief as draft ID 4273 "Daily Tech Brief: Bessent Pushes Nvidia for an Outside CEO (November 16, 2026)", category Tech Brief (12), Yoast fields saved, public URL 404 (not published). Edit: /wp-admin/post.php?post=4273&action=edit
+- CONTACT EMAIL (approved by Rahul): contact@growdigitalny.com set up in hPanel by Rahul (MX -> mx1/mx2.hostinger.com, test email received; CF7 "Contact form 1" now sends to it).
+  - Contact page (ID 3904): added "Prefer email? Write to us at contact@growdigitalny.com." above the form (prepended to HTML widget 45d74c1 via REST _elementor_data; CSS and form untouched). Re-saved heading 9829e84 with identical text to refresh Elementor's cache. Backup: `backups/contact-us-20261116-052427.json`.
+  - Footer (elementor-hf 3848, site-wide): text widget 5bcc37a now has the tagline plus "Email: contact@growdigitalny.com" (mailto). Backup: `backups/footer-3848-20261116-052427.json` (no REST route; widget text saved).
+  - Verified live: /contact-us/ (2 mailto links, form present, 1 H1), /about-us/ and home (footer email).
+- LEGAL PAGES PUBLISHED (approved by Rahul). Source: latest GitHub legal/ drafts (privacy-policy.html now includes the GTranslate section; terms and affiliate-disclosure unchanged). 30 edits applied (scratchpad legal-edit.js): dates November 16, 2026; tracking table = Google Analytics 4 (Site Kit, tag GT-P3J386L9) + Google Translate (via GTranslate) only; AdSense row, GTM/Google Ads/UET/Clarity/Meta rows, EU consent sentence, cookie-banner/newsletter/GPC lines removed; GA retention "according to our Google Analytics data-retention setting"; section 11 reworded (no consent banner yet; no claim that we ask for consent); sponsored-content and AdSense wording changed to "may"; all [VERIFY] resolved; contact@growdigitalny.com throughout; address kept.
+  - /privacy-policy/ (3987): content replaced with one Custom HTML block; _elementor_edit_mode cleared (old Elementor data kept in DB); template kept elementor_header_footer (prints no theme title). Yoast desc updated. Backups: backups/privacy-policy-20261116-025347.json, -052823.json.
+  - /terms-conditions/ (3967): same method; page title "TERMS & CONDITIONS" -> "Terms of Use"; Yoast title "Terms of Use | Grow Digital NY", focus kw "terms of use". Backups: backups/terms-conditions-20261116-025347.json, -052823.json.
+  - /affiliate-disclosure/ (new page 4276, published): Custom HTML block, template elementor_header_footer; Yoast title/desc/focus kw set.
+  - Verified live: all 3 return 200, one H1 each, new content, correct <title>/meta description, no [VERIFY], email links present.
+- REVIEW COMPLIANCE FIXES (approved by Rahul). Backups: `backups/<slug>-20261116-053128.json` for the 8 pages; `backups/media-alt-20261116-053128.json` (all 32 alts were empty before).
+  - FTC disclosure box (GHL wording minus "We only recommend tools we'd use for our own clients") added as a new container directly under the H1 band, before the first affiliate link, linking to /affiliate-disclosure/: Jasper (4056), Copy.ai (4203), Appy Pie (4123), PopAI (4160), GearUP (4185), CapCut (4143).
+  - All 27 affiliate buttons: target=_blank + rel="sponsored nofollow noopener" (Elementor custom attribute; nofollow toggle off so rel isn't duplicated). Jasper: chained 11-URL href -> https://jasper.ai/pricing?fpr=rahuldasshawon (5 buttons). Copy.ai: http -> https://www.copy.ai/?via=rahul-das (5). GearUP: irclickid link -> https://gearup.sjv.io/c/6095404/3204502/40222 (4). Appy Pie/PopAI/CapCut URLs unchanged.
+  - H1 added: /salon-beauty-business-marketing/ (3775) "Salon & Beauty Business Marketing"; /immigration-lawyer-marketing/ (268) "Immigration Lawyer Marketing" (title band cloned from review H1 band).
+  - Alt text set in Media Library for 32 images (31 content images on the 8 pages + logo 3844 "Grow Digital NY logo"). Decorative shapes/icons left alt="". Not done: 3777 (salon hero) and 3759 (immigration hero) AVIF images that couldn't be viewed; testimonial images (section untouched).
+  - Elementor cache refreshed by re-saving existing H1s (same text) and footer/header widgets (same text).
+  - Verified live: all 8 pages one H1; disclosure before first affiliate link on all 6 reviews; 27/27 affiliate links render rel="sponsored nofollow noopener" target="_blank"; no chained/http/click-ID links; only the 2 AVIF heroes still lack alt.
+  - Still open (not in scope): 4-5 affiliate CTAs per review (limit 3); CapCut "http://Text-to-Speech" link; mismatched images (career images on Copy.ai, Wix editor on Appy Pie/PopAI); immigration testimonials.
+- BATCH: CTA LIMIT, CAPCUT LINK, MOBILE TITLE BANDS, ALT TEXT (approved by Rahul). Backups: `backups/<slug>-20261116-054544.json` (8 pages), `backups/media-alt-20261116-054544.json`.
+  - 3 affiliate buttons max per review (top/middle/final kept); extra buttons replaced by text-editor text links with the same label + "→", same URL, target=_blank rel="sponsored nofollow noopener": Jasper 7e5410b, d05ffc7; CapCut 7e5410b, d05ffc7; Copy.ai 1053b7a, eabca59; Appy Pie, PopAI, GearUP 1053b7a.
+  - CapCut feature list (5e558ec) "AI Image Generation": broken http://Text-to-Speech link removed, text kept.
+  - Salon (3775) and Immigration (268) title bands, mobile only: H1 48px -> 34px (line height 40px), band padding 80px -> 32px top/bottom, 15px sides. Desktop/tablet unchanged.
+  - Alt text: 3759 (immigration hero), 3777 (salon hero), feature icons 3732-3735 (Receipt/Gear/Clipboard/Rocket icon). Decorative shapes left alt="" on purpose. (First attempt sent empty values due to a PowerShell ordered-dictionary indexing bug; caught in live check and re-sent; stored values verified.)
+  - Verified live: each review has exactly 3 affiliate buttons + the text links, all with correct rel; no Text-to-Speech link; mobile CSS has 34px/40px H1 and 32px padding vars; all content images on the 8 pages now have alt text.
+  - Listed for Rahul's decision (not changed): career images on Copy.ai (4190/4194/4195/4196, incl. fake "CareerBoost AI" dashboard), Wix editor image 4130 on Appy Pie and PopAI, immigration testimonials (stock photo 3747, placeholder 3748, "Highly recommend", "software solutions" sentence).
+- MOBILE-FIRST BATCH, PART A (approved by Rahul, per seo/mobile-audit-2026-11-16.md). Backups: `backups/<slug>-20261116-055239.json` (home, services, about-us, 8 industry pages). Phone-only (<=767px) Elementor settings; desktop/tablet unchanged.
+  - Home hero (6): section padding 160/80/120/80 -> 32/16/48/16; column padding -> 0; label 16px/2px spacing -> 13px/normal; H1 64px -> 40px (-1px spacing).
+  - Title bands (services 4057, about-us 3950, hotel 4004, car 3931, restaurant 3924, real estate 3890, life insurance 3827, event 3802): H1 -> 34px/40px line height, padding 80px -> 32px top/bottom (15px sides). Salon/Immigration already done.
+  - /services/: new intro paragraph under the H1 (all devices), global positioning copy.
+  - Verified at 390x844 (popup hidden for measurement): home H1 40px/4 lines, label 1 line, no sideways scroll (was 443px wide); industry H1s 2-5 lines, first text 419-664px (was 627-884px); /services/ first text 207px (was ~5,470px). Desktop 1366px unchanged (64px/54px H1s).
+- MOBILE-FIRST BATCH, PART B (approved by Rahul): activated LiteSpeed Cache 7.9.3 (was installed, inactive) via MCP plugin-activate. The plugin adds its own rules to .htaccess on activation. Default settings so far: page cache for logged-out visitors on, everything else at plugin defaults (no CSS/JS combine).
+  - Verified: home server response 4.05s (miss) -> 0.17s (hit); Jasper 0.74s -> 0.13s; pages, disclosure box and contact form render normally when cached; phone layout at 390x844 unchanged.
+  - Rahul to apply in WP Admin: Force Cache URIs `/tech-news/ 1800` and `/category/tech-brief/ 1800`, browser cache, lazy load (exclude logo.png), QUIC.cloud WebP (keep original backups). Not done yet.
+  - Undo: Plugins -> LiteSpeed Cache -> Deactivate (removes its .htaccess rules).
+- SITE STRUCTURE STEP 1 (approved): moved default post /hello-world/ (post 1, with its sample comment) to Trash via REST (restorable 30 days). Backup: `backups/hello-world-post-1-20261116-060940.json`. Pending: .htaccess redirect /about/ -> /about-us/ (Rahul adds), then trash /about/ (1490); Blog menu item and /customer-cabinet/ (292) await Rahul's decision.
+- PUBLISHING STEP 2, BATCH 1 (drafts only). Sources: GitHub pages/gohighlevel-review.html, pages/getresponse-review.html. Verified on official sites 2026-11-16 (gohighlevel.com/pricing + /pro-trial; getresponse.com/pricing; competitor columns on clickfunnels.com, mailchimp.com, kit.com, mailerlite.com pricing pages).
+  - GHL: prices $97/$297/$497 confirmed; added 3 sub-accounts on Starter, white-label app on Unlimited, 10x yearly pricing, 14-day trial (card required, auto-billing), month-to-month, usage-based costs; HubSpot column removed (unverifiable); ClickFunnels column rewritten from its pricing page; FAQ text and FAQ schema updated together.
+  - GetResponse: all 13 [VERIFY] items resolved ($19/$59/$69 at 1,000 subscribers, -18% yearly, 14-day trial with no card, free account after trial and its limits, automation/ecommerce/webinar plan gating); /best-ai-writing-tools/ link removed until that page is live.
+  - Both: [SCREENSHOT] boxes removed; honest "How we evaluated" line added; "Prices checked November 16, 2026"; dropped "We only recommend tools we'd use for our own clients" from the disclosure (unverifiable claim, matches live reviews).
+  - Created as DRAFTS: 4278 /gohighlevel-review/, 4279 /getresponse-review/ (Custom HTML block, .gdny content only, template elementor_header_footer = no theme title, Yoast title/description/focus keyword set). Final files: backups/batch1-verified-20261116/.
+  - Python isn't installed on Rahul's PC, so tools/prepublish_check.py couldn't run; added tools/prepublish_check.js (same rules, Node). Both pages READY.
+- PUBLISHED (Rahul said "publish"): /gohighlevel-review/ (4278) and /getresponse-review/ (4279). Pre-publish copies: backups/draft-4278-*.json, draft-4279-*.json. Verified live: HTTP 200, Yoast titles/descriptions, 1 H1, disclosure before first affiliate link, 3/3 affiliate links rel=sponsored nofollow noopener target=_blank, FAQ schema, indexable, phone 390px no overflow. GHL still uses fp_ref=d4ry58 (Rahul to confirm which code is his).
+- STEP 3: /blog/ created as DRAFT (page 4282, block editor, not Elementor; template elementor_header_footer so no theme title). Source: GitHub pages/blog.html. Kept the 8 live review cards (Jasper, Copy.ai, GoHighLevel, GetResponse, CapCut, Appy Pie, PopAI, GearUP); removed 15 cards for unpublished pages, the empty Comparisons section, the Tech Brief latest-posts block (no published briefs yet) and the "See Today's Tech News" button (/tech-news/ is a draft). H1, lead and meta description reworded so they don't promise comparisons/news that aren't there yet. Yoast title/description/focus keyword set. Final file: backups/batch1-verified-20261116/blog.html.
+  - tools/prepublish_check.py and tools/prepublish_check.js now also accept block-markup pages that start with a wp:group block (they rejected /blog/ as "no .gdny wrapper").
+- PUBLISHED /blog/ (4282, Rahul said "yes"). Added "Blog" to the header menu (Top Menu, id 6; new item 4284 at position 4, Contact Us moved to 5). Backup: backups/menu-6-items-*.json. Verified live: HTTP 200, Yoast title, 1 H1, 8 cards all linking to live pages (0 broken), styles applied; phone menu (390px) shows Home, Services, About Us, Blog, Contact Us once each; Blog link present in header on cached pages too.
+- PUBLISHING STEP 2, BATCH 2 (drafts only). Sources: GitHub pages/best-ai-writing-tools.html, best-email-marketing-tools.html, best-newsletter-platforms.html, best-ai-sdr-tools.html. All 75 [VERIFY] items resolved from each vendor's own site on 2026-11-16 (about 30 vendor pricing/product pages; details in each file's header).
+  - Corrections from verification: AI-Writer repositioned as research answers for students/researchers; Rytr added communication features; Simplified now sells campaign-running agents; ContentBot "AI Workflows"; neuroflash pick reworded to German-speaking teams (no EU claim found); Substack keeps 10%; Ghost 0% only on Publisher+; AiSDR now pay-as-you-go $1.50/person (agent "Ami"); Regie.ai has a free plan and per-seat credits (no seat minimum found); 11x now sells inbound/outbound/expansion agents; unverifiable "high cost", "enterprise focus", "reviewers mention accuracy issues" and bot-law claims removed or reworded.
+  - "How we compared them" placeholders replaced with honest lines (no hands-on testing claimed). Disclosure sentence "We only recommend tools we'd use..." removed. Copy.ai link switched to https. Links/cards to unpublished reviews removed (7 on AI writing, 2 on newsletters, Salesforge link + button on AI SDR).
+  - Drafts: 4285 /best-ai-writing-tools/, 4286 /best-email-marketing-tools/, 4287 /best-newsletter-platforms/, 4288 /best-ai-sdr-tools/ (Custom HTML, template elementor_header_footer, Yoast title/description/focus keyword). Pre-publish check READY on all 4. Final files: backups/batch2-verified-20261116/.
+- 2026-11-16 HEADER/FOOTER FIX (Rahul: "yes A + skip link"). Backup: backups/header-footer-templates-20261116-065235.json (HFE templates 18 + 3848 aren't REST-exposed; backup = MCP structure + all footer widget settings).
+  - Part 1 (read-only): all 18 outbound links tested. All 200 except facebook.com/adpreferences (400 to every automated client, unconfirmed; Rahul to click). Jasper keeps ?fpr=rahuldasshawon after the redirect. FTC Endorsement Guides 301s to ...-what-people-are-asking.
+  - Footer (Header Footer Elementor template 3848): deleted the 4 link-column containers (Company 4810bdc, Products 5034170, Solution f6c4577, Resources 4e5206f): 20 dead "#" links removed. Text widget 5bcc37a now also holds About /about-us/, Services /services/, Blog /blog/, Contact /contact-us/ and Privacy Policy, Terms & Conditions, Affiliate Disclosure. LiteSpeed cache purged.
+  - Verified live on /, /jasper-ai-review-pricing-2026/, /contact-us/, /gohighlevel-review/: 0 href="#", all 3 legal links present; phone 390px and desktop 1366px screenshots OK, no sideways scroll.
+  - Skip link: turned on Hello Elementor "Disable skip link" (theme-settings REST), but the broken link comes from the Header Footer Elementor plugin (a.hfe-skip-link href="#content"), so it had no effect. Reverted the Hello setting to its original value (SKIP_LINK false). Not fixed; reported.
+  - Still open: 4 social icons with no href (tools can't delete them alone; Rahul to remove in Elementor or send URLs).
+- 2026-11-16 PUBLISHED BATCH 2 COMPARISONS (Rahul: "publish the 4 comparison drafts"). Backups first: backups/page-4285-20261116-133126.json, page-4286-…, page-4287-…, page-4288-…, page-4282-20261116-133126.json (/blog/ before edit).
+  - Published via REST (status only, JSON from file): 4285 /best-ai-writing-tools/, 4286 /best-email-marketing-tools/, 4287 /best-newsletter-platforms/, 4288 /best-ai-sdr-tools/. LiteSpeed cache purged.
+  - Verified live (logged out): all HTTP 200, 1 H1, Yoast <title> + meta description match (134/147/144/149 chars), no noindex, 0 [VERIFY], JSON-LD valid. Disclosure box before the first affiliate link on the 3 affiliate pages (20, 5 and 3 affiliate links, all rel="sponsored nofollow noopener" target=_blank); AI SDR page has no affiliate links and shows the "No affiliate links" line. CTA buttons 2/2/2/1. Internal links: 15 checked, all 200 except the site-wide header "Get in Touch" and before-footer "Contact us" buttons (href="/contact-us" without slash -> 301 to /contact-us/; works, not broken).
+  - Phone 390x844 and desktop 1366x900 renders OK (disclosure at top, H1 2-5 lines on phone). Wide comparison tables scroll inside their own box on phones (by design).
+  - /blog/ (4282): added a "Comparisons" section (first on the page) with 4 cards to the new pages, plus a "Comparisons" jump link. Stored content verified identical to the built file (backups/batch2-verified-20261116/blog-content-after.html). Cache purged. Verified live: 12 cards, all 12 card links 200; phone and desktop renders OK. H1, lead and Yoast fields unchanged.
+- 2026-11-16 SMOKE-TEST FIX BATCH (source: GitHub seo/smoke-test-2026-11-16.md; Rahul: "yes, free audit"). Backups: backups/<slug>-20261116-150408.json for about-us (3950), immigration-lawyer-marketing (268), event-management-marketing (3802), life-insurance-marketing (3827), about (1490); settings snapshot backups/smoke-fix-settings-20261116-150408.json.
+  - Tests from the PC (read-only): http://, https://www. and http://www. all end on https://growdigitalny.com/ (301). Outbound: 30 pages crawled, 52 unique outbound links; all 18 affiliate links 200; vendor/reference links 200 except bot blocks (kit.com 403 and optout.aboutads.info 429 load fine in headless Chrome; claude.ai shows a Cloudflare check; facebook.com/adpreferences 400 to any automated client, Rahul to click).
+  - LiteSpeed Cache: applied preset "essentials" (no-risk: default cache, higher TTL, browser cache) via MCP; LiteSpeed auto-backed up the previous settings. Verified: static files now send Cache-Control max-age=31557600. Rahul to switch on by hand: lazy load (exclude logo.png), QUIC.cloud domain key + WebP replacement (keep originals), Force Cache URIs "/tech-news/ 1800" and "/category/tech-brief/ 1800". Undo: Toolbox > Import/Export > History restore, or deactivate.
+  - Templates: Yoast noindex set on elementor-hf 18 (header), 3848 (footer), 3906 (before-footer). Verified: elementor-hf-sitemap.xml now lists 0 URLs, and /elementor-hf/* URLs 301 to the homepage for visitors. Rahul to also set Yoast > Settings > Content types > Elementor Header & Footer > Show in search results: Off (removes the empty sitemap from the index too).
+  - /about/ (page 1490, lorem-ipsum duplicate): moved to Trash (restorable 30 days; WordPress also removed its items from the unused menus 10 "Company" and 11 "Header"). Verified: not in page-sitemap; /about/ already 301s to /about-us/ (WordPress slug guess). Rahul may still add the explicit rule at the top of .htaccess: RedirectMatch 301 ^/about/?$ https://growdigitalny.com/about-us/
+  - Dead # buttons fixed (Rahul confirmed a free audit is offered): event 3802 8e48ff7 "Get a FREE event marketing audit" -> /contact-us/; 3802 de27cf1 "See Projects" -> text "See Our Services" -> /services/ (no projects page exists); life insurance 3827 8e48ff7 "Get a FREE insurance marketing audit" -> /contact-us/; 3827 de27cf1 "Start generating high-quality leads today" -> /contact-us/. Verified live: 0 href="#" on both pages.
+  - Phone order (mobile-only Elementor settings, via REST _elementor_data, H1 re-saved to refresh CSS, cache purged): about-us section 6c13bc5 reverse_order_mobile off, container 6fd0ad5 flex_direction_mobile column-reverse; immigration container 9f006a4 flex_direction_mobile column-reverse (the old reverse_order_mobile is ignored by flex containers). Verified at 390x844: immigration intro heading 817px -> 303px, first paragraph 933 -> 419px; about-us "Founder Background" 653 -> 263px, first paragraph 1567 -> 1275px; no sideways scroll. Desktop 1366 unchanged (text beside images).

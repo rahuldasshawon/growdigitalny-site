@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read", "Glob", "Grep", "WebFetch", "WebSearch",
+      "Write(./content/briefs/**)", "Edit(./content/briefs/**)", "Edit(./CHANGELOG.md)"
+    ],
+    "deny": [
+      "Read(./.env)", "Read(./.env.*)", "Read(./backups/**)",
+      "Write(./.claude/**)", "Edit(./.claude/**)", "Write(./automation/**)", "Edit(./automation/**)",
+      "Edit(./.mcp.json)", "Write(./.mcp.json)"
+    ]
+  }
+}
