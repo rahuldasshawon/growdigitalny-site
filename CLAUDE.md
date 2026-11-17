@@ -452,6 +452,11 @@ you act**. The `/hostinger` command handles this.
 6. Every affiliate page gets the **disclosure box** at the top
    (copy it from `gohighlevel-review.html`) and a link to `/affiliate-disclosure/`.
 7. Keep a running log of everything you change in `CHANGELOG.md`.
+8. **Never bypass the safety filter** (Rahul, 2026-11-16). All WordPress work goes through the guarded
+   `growdigitalny-wordpress` MCP tools, which pass through `.claude/hooks/wp-ability-guard.ps1`. Don't use REST
+   scripts, curl or any other route that skips the filter, **even for actions the filter would allow** (creating,
+   updating or publishing pages included). If the filter blocks something you need, or the only way to do a task
+   would skip it, **stop and ask Rahul**. Don't look for a workaround.
 
 ## Clean affiliate links
 
