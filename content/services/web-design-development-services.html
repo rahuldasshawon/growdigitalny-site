@@ -7,10 +7,10 @@
   ONE H1: set the WordPress page title to the H1 text and hide the theme title
   (Elementor: Hide Title; most themes have a per-page option), or delete the in-page H1. Styles are scoped to .gdny.
   BEFORE PUBLISHING:
-   1. Search for [VERIFY] and fill in every item: pricing and currency, timelines, response time, contract terms, tools and time zones. Delete the highlights.
-   2. Fill in the email in the ProfessionalService JSON-LD at the bottom (areaServed is set to Worldwide).
-   3. Proof box: add one REAL client result or testimonial with permission, or delete the box. Never invent one.
-   4. Replace the [FORM] placeholder with your form plugin's shortcode.
+   1. DONE 2026-11-16 (Rahul's rule: no prices, timelines or promises he hasn't confirmed): pricing says "Pricing depends on scope; we'll send a clear quote". Response time, starting price, currency, contract terms, typical timeline, tools, time zones and "regular backups" were removed.
+   2. Email set to contact@growdigitalny.com (page and ProfessionalService JSON-LD).
+   3. Proof box removed (no confirmed client result yet). Add one later only with permission.
+   4. Form: Contact Form 7 shortcode [contact-form-7 id="7b997a9" title="Contact form 1"] (the same form as /contact-us/).
    5. CTA buttons: 3 (top, after pricing, final), all going to /contact-us/. No affiliate links on this page (by design).
    6. Cross-links to the other two service pages. Publish all three together.
    7. GLOBAL AUDIENCE: if you'll take EU/UK leads, make sure the privacy policy and a cookie-consent banner are live first.
@@ -58,10 +58,14 @@
 .gdny .steps li{counter-increment:s;position:relative;padding:0 0 14px 48px;margin:0}
 .gdny .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
 .gdny .proof{border:2px dashed #e0c98a;border-radius:12px;padding:20px;background:var(--warn);color:#6b5418;margin:18px 0}
-.gdny .form-slot{border:2px dashed #aab4c8;border-radius:12px;padding:26px 16px;margin:18px 0 6px;color:#cfd6e4}
+.gdny .form-slot{background:#fff;color:var(--ink);border-radius:12px;padding:20px 16px;margin:18px 0 6px;text-align:left}
+.gdny .form-slot p{color:var(--ink)}
+.gdny .form-slot input:not([type=submit]),.gdny .form-slot textarea{width:100%;max-width:100%;font-size:16px;padding:10px;border:1px solid var(--line);border-radius:8px}
+.gdny .form-slot input[type=submit]{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:14px 26px;font-weight:700;font-size:1rem;min-height:44px;cursor:pointer}
+.gdny .final a.mail{color:#fff}
 .gdny .pick{font-size:.8rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.04em}
 .gdny .tool{border-top:1px solid var(--line);padding-top:6px}
-@media(max-width:680px){.gdny{font-size:16px}.gdny h1{font-size:1.8rem}.gdny .grid{grid-template-columns:1fr}.gdny .btn{display:block;text-align:center}.gdny table{display:block;overflow-x:auto}}
+@media(max-width:680px){.gdny{font-size:16px}.gdny h1{font-size:1.5rem}.gdny .grid{grid-template-columns:1fr}.gdny .btn{display:block;text-align:center}.gdny table{display:block;overflow-x:auto}}
 </style>
 
 <h1>Web Design and Development for Startups, SaaS and Online Businesses</h1>
@@ -69,7 +73,7 @@
 
 <p class="lead">Fast, scalable websites built to convert visitors from any country into sign-ups, demos and customers. We work remotely with founders and marketing teams worldwide, from first launch to a full rebuild.</p>
 
-<p><a class="btn" href="/contact-us/">Book a Free Website Review →</a><span class="btn-sub">No obligation · We'll reply within <mark class="verify">[VERIFY: response time, e.g. one business day]</mark></span></p>
+<p><a class="btn" href="/contact-us/">Book a Free Website Review →</a><span class="btn-sub">No obligation · No pressure</span></p>
 
 <div class="toc"><strong>On this page</strong>
 <ol><li><a href="#sv-who">Who it's for</a></li><li><a href="#sv-included">What's included</a></li><li><a href="#sv-process">How it works</a></li><li><a href="#sv-pricing">Pricing</a></li><li><a href="#sv-remote">How we work remotely</a></li><li><a href="#sv-faq">FAQ</a></li></ol></div>
@@ -90,8 +94,8 @@
   <div class="card"><h3>Global web architecture</h3><p>A clean site structure, CDN-ready hosting and a setup that scales as you add pages, products and markets.</p></div>
   <div class="card"><h3>Speed and Core Web Vitals</h3><p>Lightweight pages and optimized assets so the site loads quickly for visitors everywhere, on any connection.</p></div>
   <div class="card"><h3>Multilingual and multi-region</h3><p>Language and regional versions with correct hreflang tags when you're ready to expand. Pair it with our <a href="/seo-services/">SEO</a> service.</p></div>
-  <div class="card"><h3>Accessible and secure</h3><p>Built with accessibility best practices, HTTPS, regular backups and security hardening.</p></div>
-  <div class="card"><h3>Easy for your team to edit</h3><p>WordPress or another CMS your team can update without a developer <mark class="verify">[VERIFY: which platforms you build on]</mark>.</p></div>
+  <div class="card"><h3>Accessible and secure</h3><p>Built with accessibility best practices, HTTPS and security hardening.</p></div>
+  <div class="card"><h3>Easy for your team to edit</h3><p>A CMS such as WordPress that your team can update without a developer.</p></div>
 </div>
 
 <h2 id="sv-process">How it works</h2>
@@ -104,28 +108,30 @@
 </ol>
 
 <h2 id="sv-pricing">Pricing</h2>
-<p>Projects are quoted based on scope: number of pages, integrations and languages. <mark class="verify">[VERIFY: typical starting price or range, and currency, e.g. USD]</mark></p>
-<p>You'll get a clear written proposal before any work starts <mark class="verify">[VERIFY: confirm your contract terms, e.g. minimum term and notice period]</mark>.</p>
+<p>Pricing depends on scope: the number of pages, integrations and languages. Tell us what you need, and we'll send a clear quote.</p>
+<p>You'll get the quote in writing before any work starts, so there are no surprises.</p>
 <p style="margin-top:22px"><a class="btn" href="/contact-us/">Book a Free Website Review →</a></p>
 
 <h2 id="sv-remote">How we work with clients worldwide</h2>
-<p>We're a remote-first agency, so where you're based doesn't matter. Work runs through shared project boards and written updates you can read on your own schedule, with video calls for kick-offs, reviews and monthly check-ins <mark class="verify">[VERIFY: tools you use, e.g. Slack, Loom, Google Meet, and the time zones you cover]</mark>.</p>
-<div class="proof">[VERIFY: add one real client result or testimonial, with permission, e.g. a named company, its country and a specific, true outcome. If you don't have one yet, delete this box. Never invent one.]</div>
+<p>We're a remote-first agency, so where you're based doesn't matter. Work runs through shared project boards and written updates you can read on your own schedule, with video calls for kick-offs and reviews.</p>
 <p>We also offer <a href="/seo-services/">SEO</a> and <a href="/lead-generation-services/">lead generation</a>, so your website, search visibility and campaigns work together.</p>
 
 <h2 id="sv-faq">Frequently asked questions</h2>
 <details><summary>Do you work with clients outside the United States?</summary><p>Yes. We're a remote-first agency and work with startups and online businesses worldwide.</p></details>
-<details><summary>How do you handle different time zones?</summary><p>Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times that suit you. <mark class="verify">[VERIFY: your working hours and time zone overlap]</mark></p></details>
-<details><summary>How long does a website project take?</summary><p>A focused marketing site usually takes <mark class="verify">[VERIFY: typical timeline]</mark>. Larger builds with integrations or multiple languages take longer, and we'll give you a timeline before we start.</p></details>
-<details><summary>Which currencies do you invoice in?</summary><p><mark class="verify">[VERIFY: e.g. USD by default; other currencies on request]</mark></p></details>
+<details><summary>How do you handle different time zones?</summary><p>Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times we agree together.</p></details>
+<details><summary>How long does a website project take?</summary><p>It depends on scope: the number of pages, integrations and languages. We'll include a timeline in your quote before we start.</p></details>
+<details><summary>Which currencies do you invoice in?</summary><p>We'll confirm the currency in your written quote before any work starts.</p></details>
 <details><summary>Can you rebuild our site without losing search traffic?</summary><p>Yes. We map old URLs to new ones, keep redirects in place and check rankings and traffic after launch.</p></details>
 
 <div class="final">
   <h2>Ready to grow your business online?</h2>
   <p>Tell us about your product and goals, and we'll suggest the next step, with no pressure and no jargon.</p>
-  <div class="form-slot">[FORM: embed your contact form here (WPForms, Elementor Form or GetResponse form shortcode). Include a link to <a href="/privacy-policy/" style="color:#cfd6e4">our privacy policy</a> under the form.]</div>
+  <div class="form-slot">
+[contact-form-7 id="7b997a9" title="Contact form 1"]
+  <p style="font-size:.85rem;margin:8px 0 0">We'll use your details only to reply to you. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+  </div>
   <p style="margin-top:16px"><a class="btn" href="/contact-us/">Book a Free Website Review →</a></p>
-  <span class="btn-sub">Or email <mark class="verify">[CONTACT EMAIL]</mark></span>
+  <span class="btn-sub">Or email <a class="mail" href="mailto:contact@growdigitalny.com">contact@growdigitalny.com</a></span>
 </div>
 
 <script type="application/ld+json">
@@ -135,7 +141,7 @@
 "name": "GrowDigitalNY",
 "url": "https://growdigitalny.com/",
 "description": "Fast, scalable websites built to convert visitors from any country into sign-ups, demos and customers. We work remotely with founders and marketing teams worldwide, from first launch to a full rebuild.",
-"email": "[VERIFY: contact email]",
+"email": "contact@growdigitalny.com",
 "areaServed": "Worldwide",
 "makesOffer": {
 "@type": "Offer",
@@ -164,7 +170,7 @@
 "name": "How do you handle different time zones?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times that suit you. [VERIFY: your working hours and time zone overlap]"
+"text": "Most work happens asynchronously, with shared project boards and recorded updates, plus scheduled video calls at times we agree together."
 }
 },
 {
@@ -172,7 +178,7 @@
 "name": "How long does a website project take?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "A focused marketing site usually takes [VERIFY: typical timeline]. Larger builds with integrations or multiple languages take longer, and we'll give you a timeline before we start."
+"text": "It depends on scope: the number of pages, integrations and languages. We'll include a timeline in your quote before we start."
 }
 },
 {
@@ -180,7 +186,7 @@
 "name": "Which currencies do you invoice in?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "[VERIFY: e.g. USD by default; other currencies on request]"
+"text": "We'll confirm the currency in your written quote before any work starts."
 }
 },
 {
