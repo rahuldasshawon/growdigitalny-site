@@ -504,7 +504,7 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
 `/affiliate-disclosure/` ✅ **live since 2026-11-16 (page 4276)**. Privacy and Terms were replaced the same day (the Terms page title is now "Terms of Use", URL unchanged).
 
 **Live pages:**
-- **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16; live page still has the wrong fp_ref=d4ry58 until the 2026-11-19 file is pasted),
+- **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16; fp_ref=s5tzm7 bootcamp links live since 2026-11-18 ~23:25 NY time; page 4286 fixed too),
   `/getresponse-review/` (page 4279, live 2026-11-16),
 - **Comparisons (live 2026-11-16):** `/best-ai-writing-tools/` (4285), `/best-email-marketing-tools/` (4286),
   `/best-newsletter-platforms/` (4287), `/best-ai-sdr-tools/` (4288)
