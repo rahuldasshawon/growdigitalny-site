@@ -171,8 +171,12 @@ who's done the work and is being straight with them.
 - **Operator:** Rahul Das, sole proprietor, trading as Grow Digital NY. **Grow Digital NY LLC is not yet
   registered.** Never write "LLC" until it is; when it's registered, update the legal pages (one line each).
 - **Contact email:** contact@growdigitalny.com (a Hostinger mailbox).
-- **Mailing address** (legal pages and newsletter footers, as CAN-SPAM requires): 105-18 171st Place, Jamaica,
-  NY 11433, USA. A PO box or virtual mailbox can replace it later.
+- **Public identity on the website (Rahul, 2026-11-19):** "Rahul Das, GrowDigitalNY, Queens, New York" plus
+  contact@growdigitalny.com. **No street address on any web page**, and don't mention the LLC status on the legal pages.
+- **Newsletter footers still need a valid postal address** (CAN-SPAM). Use a PO box or virtual mailbox once Rahul has
+  one; ask him before putting his home address in any email.
+- **Footer tagline (2026-11-19):** "A New York-based digital marketing studio working with businesses worldwide. We
+  treat your growth like our own."
 - **Governing law:** New York; courts in Queens County.
 - **Affiliate networks in use:** Impact (pxf.io / sjv.io links), FirstPromoter (fpr= / fp_ref=), Rewardful
   (via=), plus direct programs (GetResponse ?a=).

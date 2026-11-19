@@ -6,7 +6,8 @@ Read this first, then `CLAUDE.md` (the full rules), then `STATUS.md` (open items
 
 - **Owner:** Rahul Das, a sole proprietor trading as **Grow Digital NY** (growdigitalny.com). An LLC is planned but
   **not registered yet**, so never write "LLC". Contact: contact@growdigitalny.com (Hostinger mailbox; Rahul to
-  create and test it). Mailing address: 105-18 171st Place, Jamaica, NY 11433. Governing law: NY, Queens County.
+  create and test it). On the website: "Rahul Das, GrowDigitalNY, Queens, New York" (no street address, since
+  2026-11-19). Newsletter emails still need a postal address (PO box planned). Governing law: NY, Queens County.
 - Rahul is **not technical**. Guide him **one small step at a time**, in plain language, and say exactly where to
   click or type.
 - **Business:** a global, **remote-first** digital marketing and web development agency (web design, SEO, lead
