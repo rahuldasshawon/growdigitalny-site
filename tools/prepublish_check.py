@@ -101,8 +101,13 @@ def check(path):
         warn.append("banned corporate phrase found: " + ", ".join(sorted(set(m.group(0) for m in re.finditer(BANNED, body, re.I)))))
 
     # 4. meta lengths from the header
-    mt = re.search(r"Meta title \(≤60\):\s*(.+)", head)
-    md = re.search(r"Meta description \(≤155\):\s*(.+)", head)
+    # Accepts "Meta title (≤60):" and "Meta title (60 max):" (same for description).
+    mt = re.search(r"Meta title \((?:≤\s*60|60\s*max)\):\s*(.+)", head, re.I)
+    md = re.search(r"Meta description \((?:≤\s*155|155\s*max)\):\s*(.+)", head, re.I)
+    if head.strip() and not mt:
+        warn.append("no 'Meta title (60 max):' line found in the header, so its length wasn't checked")
+    if head.strip() and not md:
+        warn.append("no 'Meta description (155 max):' line found in the header, so its length wasn't checked")
     if mt and len(mt.group(1).strip()) > 60:
         block.append(f"meta title is {len(mt.group(1).strip())} characters (max 60)")
     if md and len(md.group(1).strip()) > 155:

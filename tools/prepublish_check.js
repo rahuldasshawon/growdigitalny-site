@@ -24,7 +24,7 @@ for (const path of process.argv.slice(2)) {
   for (const m of body.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) { try { JSON.parse(m[1]); } catch (e) { block.push('invalid JSON-LD: ' + e.message); } }
   if (/20(2[89]|[3-9]\d)/.test(body.replace(/Updated [A-Z][a-z]+ 2026/g, '')) || /Updated [A-Z][a-z]+ 2027/.test(body)) warn.push('check dates');
   const bn = body.match(BANNED); if (bn) warn.push('banned phrase: ' + [...new Set(bn)].join(', '));
-  const mt = head.match(/Meta title \(≤60\):\s*(.+)/), md = head.match(/Meta description \(≤155\):\s*(.+)/);
+  const mt = head.match(/Meta title \((?:≤\s*60|60\s*max)\):\s*(.+)/i), md = head.match(/Meta description \((?:≤\s*155|155\s*max)\):\s*(.+)/i);
   if (mt && mt[1].trim().length > 60) block.push(`meta title ${mt[1].trim().length} chars`);
   if (md && md[1].trim().length > 155) block.push(`meta description ${md[1].trim().length} chars`);
   console.log(`${block.length ? 'NOT READY' : 'READY'}  ${path.replace(/^.*[\\/]/, '')}  (buttons=${btns.length}, affiliate links=${sp.length}, meta title=${mt ? mt[1].trim().length : '-'}, meta desc=${md ? md[1].trim().length : '-'})`);
