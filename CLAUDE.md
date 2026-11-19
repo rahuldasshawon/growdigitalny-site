@@ -462,8 +462,16 @@ you act**. The `/hostinger` command handles this.
 
 | Offer | Link | Status |
 |---|---|---|
-| GoHighLevel (trial) | https://www.gohighlevel.com/pro-trial?fp_ref=d4ry58 | Priority. Rahul must confirm which fp_ref is his (d4ry58 vs rahuldasshawon) |
-| GoHighLevel (certifications) | https://www.gohighlevel.com/certifications?fp_ref=rahuldasshawon | Secondary |
+| GoHighLevel (30-day trial + bootcamp) | https://www.gohighlevel.com/highlevel-bootcamp?fp_ref=s5tzm7 | **Priority, main CTA.** Code s5tzm7 confirmed by Rahul 2026-11-19. 30-day trial verified on the page 2026-11-19 |
+| GoHighLevel (default) | https://www.gohighlevel.com/?fp_ref=s5tzm7 | Active |
+| GoHighLevel (pricing, all 3 plans + annual) | https://www.gohighlevel.com/pricing?fp_ref=s5tzm7 | Active |
+| GoHighLevel (Starter/Unlimited annual) | https://gohighlevel.com/annual?fp_ref=s5tzm7 | Active |
+| GoHighLevel (Founder $497) | https://founder.gohighlevel.com/?fp_ref=s5tzm7 | Active |
+| GoHighLevel (in-app upgrades) | https://app.gohighlevel.com/offers/affiliate-upgrade?fp_ref=s5tzm7 | Existing users only |
+| GoHighLevel Black Friday 2026 (new users) | https://gohighlevel.com/black-friday-2026?fp_ref=s5tzm7 | Live from Nov 23 per Rahul's dashboard. Verify the offer on the page before using; remove when it ends |
+| GoHighLevel holiday promos (existing users) | https://app.gohighlevel.com/holiday-promos?fp_ref=s5tzm7 | Live from Nov 23. Existing users only |
+| GoHighLevel Cyber Monday 2026 (new customers) | https://gohighlevel.com/cyber-week-2026?fp_ref=s5tzm7 | Live from Nov 30. Verify the offer before using; remove when it ends |
+| ~~GoHighLevel d4ry58 / rahuldasshawon~~ | (do not use) | Not Rahul's code (confirmed 2026-11-19). Replace everywhere |
 | GetResponse | https://www.getresponse.com?a=VM3AQVMQxV | Priority. Brand bidding not allowed |
 | Jasper | https://jasper.ai/pricing?fpr=rahuldasshawon | Active |
 | Copy.ai | http://www.copy.ai/?via=rahul-das | Active |
@@ -496,7 +504,7 @@ and it carries `[AFFILIATE LINK: PENDING]` comments so it's easy to monetize lat
 `/affiliate-disclosure/` ✅ **live since 2026-11-16 (page 4276)**. Privacy and Terms were replaced the same day (the Terms page title is now "Terms of Use", URL unchanged).
 
 **Live pages:**
-- **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16, fp_ref=d4ry58 pending Rahul's confirmation),
+- **Reviews:** `/gohighlevel-review/` (page 4278, live 2026-11-16; live page still has the wrong fp_ref=d4ry58 until the 2026-11-19 file is pasted),
   `/getresponse-review/` (page 4279, live 2026-11-16),
 - **Comparisons (live 2026-11-16):** `/best-ai-writing-tools/` (4285), `/best-email-marketing-tools/` (4286),
   `/best-newsletter-platforms/` (4287), `/best-ai-sdr-tools/` (4288)
