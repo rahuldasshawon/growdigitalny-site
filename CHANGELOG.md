@@ -477,3 +477,17 @@ Entries written on Rahul's PC that weren't in this file yet, copied word for wor
 - Read-only (nothing changed):
   - Popup Maker #4235 content via MCP: "Unlock the Best AI Tools Before Everyone Else", CF7 form `2870ee7`, privacy consent line. Public settings: theme 4228 Enterprise Blue, size small (640x380), centered, auto-open after 3000 ms plus click-open, cookie `pum-4235` for 1 day on close, `mobile_disabled` not set (so it shows on phones), and overlay-click and Esc closing are **off**.
   - CookieYes: no MCP ability reads its settings, and the guard blocks `plugins-list` (deny list), so nothing was tried past that. Public `_ckyConfig`: type `box`, position `bottom-left`, preference center `popup`, law `gdpr`, analytics not loaded by default, revisit-consent button bottom-left.
+
+## 2026-11-19 (~00:05 NY time): page 4286 mobile H1 live at 1.35rem; popup proposal (Claude Code on Rahul's PC, approved by Rahul)
+- `pages/best-email-marketing-tools.html`: mobile H1 rule `font-size:1.4rem;line-height:1.25` -> `font-size:1.35rem;line-height:1.25` (1.4rem measured 4 lines when the popup is open). H1 text and WordPress title unchanged. Node pre-publish check: READY (2 buttons, 5 affiliate links, meta title 51, description 147).
+- Backup before the change: `backups/best-email-marketing-tools-20261118-235945.json` (full guarded `hostinger-ai/pages-get` response, copied byte-for-byte from the session transcript; live modified 2026-11-19T04:49:21 UTC).
+- Diff live vs repo file before the change: 1 line (the mobile H1 rule), nothing else.
+- After Rahul's "yes": page 4286 content replaced via the guarded `hostinger-ai/pages-update` with the file from `<div class="gdny">` to the end (one `wp:html` block, no header comment). Stored content verified identical to the repo file. Status (publish), slug, title, template (`elementor_header_footer`) and Yoast fields unchanged. Modified 2026-11-19T05:02:48 UTC.
+- Verified logged out (fresh headless Chrome profile, cache disabled, no-cache headers, iPhone UA, no admin bar), live CSS contains 1.35rem:
+  - 390x844, popup closed: **H1 = 3 lines** (21.6px font, 27px line height, 81px tall, 354px wide).
+  - 390x844, popup open (scroll lock narrows the page): **H1 = 3 lines** (339px wide).
+  - 375px worst case: 3 lines closed (339px) and 3 lines open (324px).
+  - No sideways scroll (scrollTo(200,0) leaves scrollX at 0). Only things past 390px: the CookieYes consent box (392px, plugin CSS, clipped) and an invisible absolutely-positioned Elementor image in the site template (clipped). Pre-existing, not page content.
+  - One H1, disclosure box before the first affiliate link (GetResponse), 5 sponsored links, 2 buttons.
+  - Screenshots: `seo/screenshots/best-email-marketing-tools-390x844-20261119.png` (popup open over the CookieYes box) and `seo/screenshots/best-email-marketing-tools-390x844-no-popup-20261119.png` (popup closed: disclosure, 3-line H1, byline; CookieYes box over the bottom ~40%).
+- Popup Maker #4235 (plan only, nothing changed): proposed turning it off on mobile, auto-open delay 3,000 -> 15,000 ms on desktop (or exit-intent / 50% scroll), overlay-click and Esc closing on, close cookie 1 -> 30 days. Click-by-click steps given to Rahul (Popup Maker -> All Popups -> Edit 4235 -> Popup Settings: Targeting / Triggers / Cookies / Close -> Alternate Methods -> Update). Waiting on Rahul.
